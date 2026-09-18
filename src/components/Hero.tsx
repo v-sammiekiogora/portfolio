@@ -79,6 +79,21 @@ export function Hero() {
           />
         </div>
       </div>
+
+      <dl className="home-glance" aria-label="Sammy Mati at a glance">
+        <div>
+          <dt>Working on</dt>
+          <dd>Developer learning and discovery</dd>
+        </div>
+        <div>
+          <dt>Learning</dt>
+          <dd>Data science and useful AI</dd>
+        </div>
+        <div>
+          <dt>Beyond the screen</dt>
+          <dd>Football, hiking, interesting places</dd>
+        </div>
+      </dl>
     </section>
   );
 }

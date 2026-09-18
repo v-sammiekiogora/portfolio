@@ -25,7 +25,12 @@ export function Navigation() {
             </li>
           ))}
           <li>
-            <a className="nav-link" href="mailto:sammiekiogora@gmail.com">
+            <a
+              className="nav-link"
+              href="mailto:sammiekiogora@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               Contact
             </a>
           </li>

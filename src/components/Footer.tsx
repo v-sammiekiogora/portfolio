@@ -20,6 +20,8 @@ export function Footer() {
               <a
                 className="text-link"
                 href="mailto:sammiekiogora@gmail.com"
+                target="_blank"
+                rel="noreferrer"
               >
                 Email me ↗
               </a>

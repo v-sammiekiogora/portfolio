@@ -13,10 +13,9 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Edit content
 
-The primary content is intentionally kept separate from the page layouts:
+Current-focus content is intentionally kept separate from the page layouts:
 
-- `src/data/projects.ts` — projects, experiments, and ideas
-- `src/data/now.ts` — current focus and the scrolling “Currently” list
+- `src/data/now.ts` — current work, learning, exploration, and life outside work
 
 Shared UI lives in `src/components`, and route-level composition lives in `src/app`.
 

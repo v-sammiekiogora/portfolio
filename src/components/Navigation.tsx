@@ -2,9 +2,8 @@ import Link from "next/link";
 
 const links = [
   { label: "About", href: "/about" },
-  { label: "Things I’ve made", href: "/things" },
   { label: "Now", href: "/now" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/about#contact" },
 ];
 
 export function Navigation() {
@@ -26,6 +25,16 @@ export function Navigation() {
               </Link>
             </li>
           ))}
+          <li>
+            <a
+              className="nav-link"
+              href="https://medium.com/design-bootcamp/ux-case-study-designing-an-auto-garage-mobile-app-4abc11be152"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Case study ↗
+            </a>
+          </li>
           <li>
             <a
               className="nav-link"

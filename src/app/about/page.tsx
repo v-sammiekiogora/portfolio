@@ -5,7 +5,7 @@ import { PhotoStrip } from "@/components/PhotoStrip";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "A little more about Sammy Mati, a product and technology person in Nairobi.",
+    "A little more about Sammy Mati, a curious product and technology person.",
 };
 
 export default function AboutPage() {
@@ -35,10 +35,9 @@ export default function AboutPage() {
             everything after it harder.
           </p>
           <p>
-            Nairobi is home. It’s where I build, learn, watch the city move, and
-            keep finding reminders that useful technology has to understand the
-            real world around it — not an imaginary, frictionless version of
-            one.
+            I keep finding reminders that useful technology has to understand
+            the real world around it — not an imaginary, frictionless version
+            of one.
           </p>
           <p>
             Over ten years, that curiosity has taken me through product,

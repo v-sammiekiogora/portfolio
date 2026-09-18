@@ -1,5 +1,5 @@
 const photoIdeas = [
-  "Nairobi",
+  "Home ground",
   "The next hike",
   "Interesting places",
   "Match day",
@@ -15,7 +15,7 @@ export function PhotoStrip() {
           <h2 className="display text-4xl sm:text-5xl">A visual notebook.</h2>
         </div>
         <p className="max-w-md self-end text-sm leading-relaxed text-muted sm:justify-self-end">
-          Space for Nairobi, trails, journeys, football, and small details worth
+          Space for trails, journeys, football, and small details worth
           noticing. Real photographs will live here; no borrowed scenery.
         </p>
       </div>

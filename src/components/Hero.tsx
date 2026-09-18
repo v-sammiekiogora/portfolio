@@ -9,7 +9,7 @@ const thoughts = [
   "asking too many questions.",
   "curious about AI.",
   "learning data.",
-  "from Nairobi.",
+  "planning the next hike.",
 ];
 
 export function Hero() {
@@ -43,10 +43,9 @@ export function Hero() {
         <div className="home-statement">
           <p className="eyebrow">The short version</p>
           <p className="max-w-xl text-base leading-relaxed sm:text-lg">
-            I’m a Nairobi-based product and technology person. For over ten
-            years, I’ve worked where software, UX, data, AI, and people overlap.
-            Today, I help shape how developers discover and learn on GitHub
-            Learn.
+            I’m a product and technology person. For over ten years, I’ve
+            worked where software, UX, data, AI, and people overlap. Today, I
+            help shape how developers discover and learn on GitHub Learn.
           </p>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
             I like useful questions, thoughtful interfaces, football, long
@@ -72,7 +71,7 @@ export function Hero() {
         >
           <Image
             src="/sammy.png"
-            alt="Sammy Mati smiling at his desk, surrounded by notes, books, plants, and a view of Nairobi."
+            alt="Sammy Mati smiling at his desk, surrounded by notes, books, plants, and a city view."
             fill
             priority
             sizes="(min-width: 760px) 60vw, 100vw"

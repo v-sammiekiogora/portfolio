@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s — Sammy Mati",
   },
   description:
-    "Sammy Mati is a product and technology person in Nairobi, thinking about learning, data, AI, UX, and how things could work better.",
+    "Sammy Mati is a product and technology person thinking about learning, data, AI, UX, and how things could work better.",
   openGraph: {
     title: "Sammy Mati",
     description:

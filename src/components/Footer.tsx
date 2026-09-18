@@ -45,7 +45,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 grid gap-4 border-t border-white/20 pt-5 text-[0.68rem] font-bold tracking-[0.08em] uppercase sm:grid-cols-3">
-          <p>Sammy Mati · Nairobi, Kenya</p>
+          <p>Sammy Mati</p>
           <p>Product / Technology / Data / AI</p>
           <p className="sm:text-right">
             Made with curiosity, probably too much coffee, and code.

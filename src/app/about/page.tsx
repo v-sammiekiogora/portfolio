@@ -41,7 +41,7 @@ export default function AboutPage() {
             one.
           </p>
           <p>
-            Over nearly ten years, that curiosity has taken me through product,
+            Over ten years, that curiosity has taken me through product,
             technology, UX, data, and AI. These days, some of it goes into
             GitHub Learn, where I think about how developers discover learning
             and move from wanting to know something to actually making

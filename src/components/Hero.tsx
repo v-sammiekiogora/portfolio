@@ -43,10 +43,10 @@ export function Hero() {
         <div className="home-statement">
           <p className="eyebrow">The short version</p>
           <p className="max-w-xl text-base leading-relaxed sm:text-lg">
-            I’m a Nairobi-based product and technology person. For nearly a
-            decade, I’ve worked where software, UX, data, AI, and people
-            overlap. Today, I help shape how developers discover and learn on
-            GitHub Learn.
+            I’m a Nairobi-based product and technology person. For over ten
+            years, I’ve worked where software, UX, data, AI, and people overlap.
+            Today, I help shape how developers discover and learn on GitHub
+            Learn.
           </p>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
             I like useful questions, thoughtful interfaces, football, long

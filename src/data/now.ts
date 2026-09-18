@@ -25,11 +25,3 @@ export const nowItems: NowItem[] = [
       "Football, hiking, interesting places, and paying more attention to the details around me.",
   },
 ];
-
-export const currentlyItems = [
-  "Coffee and product discovery",
-  "Learning data science",
-  "Experimenting with AI",
-  "Watching football",
-  "Planning the next hike",
-];

@@ -140,6 +140,77 @@ a {
   animation: word-in 450ms ease both;
 }
 
+.home-screen + footer {
+  display: none;
+}
+
+.home-hero {
+  display: grid;
+  min-height: calc(100svh - 5.25rem);
+  grid-template-rows: auto 1fr auto;
+  gap: clamp(1.25rem, 3vh, 2.5rem);
+  padding-block: clamp(1rem, 2.4vh, 2rem);
+}
+
+.home-links {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.home-links a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  transition: color 180ms ease, padding 180ms ease;
+}
+
+.home-links a > span:first-child {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.home-links a strong {
+  font-family: var(--font-fraunces), serif;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-weight: 520;
+}
+
+.home-links a:hover {
+  padding-inline: 0.5rem;
+  color: var(--accent);
+}
+
+@media (min-width: 760px) {
+  .home-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .home-links a {
+    padding: 1rem 1.1rem;
+    border-right: 1px solid var(--line);
+    border-bottom: 0;
+  }
+
+  .home-links a:first-child {
+    padding-left: 0;
+  }
+
+  .home-links a:last-child {
+    border-right: 0;
+  }
+
+  .home-links a:hover {
+    padding-inline: 1.5rem 0.7rem;
+  }
+}
+
 .project-preview {
   position: relative;
   min-height: 14rem;
@@ -220,40 +291,10 @@ a {
   text-transform: uppercase;
 }
 
-.marquee {
-  overflow: hidden;
-  border-block: 1px solid var(--line);
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: drift 28s linear infinite;
-}
-
-.marquee-track span {
-  padding: 0.9rem 1.4rem;
-  font-family: var(--font-fraunces), serif;
-  font-size: clamp(1.15rem, 2vw, 1.65rem);
-  white-space: nowrap;
-}
-
-.marquee-track span::after {
-  margin-left: 2.8rem;
-  color: var(--accent);
-  content: "✦";
-}
-
 @keyframes word-in {
   from {
     opacity: 0;
     transform: translateY(0.28em);
-  }
-}
-
-@keyframes drift {
-  to {
-    transform: translateX(-50%);
   }
 }
 

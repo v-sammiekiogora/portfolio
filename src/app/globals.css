@@ -147,9 +147,23 @@ a {
 .home-hero {
   display: grid;
   min-height: calc(100svh - 5.25rem);
-  grid-template-rows: auto 1fr auto;
-  gap: clamp(1.25rem, 3vh, 2.5rem);
-  padding-block: clamp(1rem, 2.4vh, 2rem);
+  grid-template-rows: auto auto 1fr;
+  gap: clamp(1rem, 2.2vh, 1.75rem);
+  padding-block: clamp(0.75rem, 1.8vh, 1.5rem);
+}
+
+.home-dashboard {
+  display: grid;
+  align-self: stretch;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.home-statement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem 0;
 }
 
 .home-links {
@@ -188,26 +202,37 @@ a {
 }
 
 @media (min-width: 760px) {
+  .home-dashboard {
+    grid-template-columns: minmax(17rem, 0.85fr) 1.5fr;
+  }
+
+  .home-statement {
+    padding: 1.5rem clamp(1.5rem, 4vw, 4rem) 1.5rem 0;
+  }
+
   .home-links {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    border-top: 0;
+    border-left: 1px solid var(--line);
   }
 
   .home-links a {
-    padding: 1rem 1.1rem;
-    border-right: 1px solid var(--line);
-    border-bottom: 0;
+    align-content: center;
+    padding: 0.75rem 1.25rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .home-links a:first-child {
-    padding-left: 0;
+    padding-left: 1.25rem;
   }
 
   .home-links a:last-child {
-    border-right: 0;
+    border-bottom: 0;
   }
 
   .home-links a:hover {
-    padding-inline: 1.5rem 0.7rem;
+    padding-inline: 1.75rem 0.75rem;
   }
 }
 

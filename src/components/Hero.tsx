@@ -35,13 +35,13 @@ export function Hero() {
         </p>
       </div>
 
-      <div className="grid items-end gap-6 lg:grid-cols-[1fr_20rem]">
-        <h1 className="display text-[clamp(4.3rem,11.5vw,10.2rem)]">
-          Sammy
-          <br />
-          Mati<span className="text-accent">.</span>
-        </h1>
-        <div className="pb-2 lg:pb-5">
+      <h1 className="display whitespace-nowrap text-[clamp(3.8rem,11.2vw,9rem)]">
+        Sammy Mati<span className="text-accent">.</span>
+      </h1>
+
+      <div className="home-dashboard">
+        <div className="home-statement">
+          <p className="eyebrow">A useful obsession</p>
           <p className="max-w-md text-lg leading-relaxed sm:text-xl">
             I like figuring out how things work, why they don’t, and how they
             could work better.
@@ -59,29 +59,29 @@ export function Hero() {
             </span>
           </p>
         </div>
-      </div>
 
-      <nav className="home-links" aria-label="Featured links">
-        <Link href="/about">
-          <span>01 · A little more human</span>
-          <strong>About me</strong>
-          <span aria-hidden="true">→</span>
-        </Link>
-        <a
-          href="https://medium.com/design-bootcamp/ux-case-study-designing-an-auto-garage-mobile-app-4abc11be152"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span>02 · Product / UX / Africa</span>
-          <strong>Autobuddy case study</strong>
-          <span aria-hidden="true">↗</span>
-        </a>
-        <Link href="/now">
-          <span>03 · Where attention is going</span>
-          <strong>What I’m up to</strong>
-          <span aria-hidden="true">→</span>
-        </Link>
-      </nav>
+        <nav className="home-links" aria-label="Featured links">
+          <Link href="/about">
+            <span>01 · A little more human</span>
+            <strong>About me</strong>
+            <span aria-hidden="true">→</span>
+          </Link>
+          <a
+            href="https://medium.com/design-bootcamp/ux-case-study-designing-an-auto-garage-mobile-app-4abc11be152"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>02 · Product / UX / Africa</span>
+            <strong>Autobuddy case study</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <Link href="/now">
+            <span>03 · Where attention is going</span>
+            <strong>What I’m up to</strong>
+            <span aria-hidden="true">→</span>
+          </Link>
+        </nav>
+      </div>
     </section>
   );
 }

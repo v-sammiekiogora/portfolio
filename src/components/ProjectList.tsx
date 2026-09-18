@@ -1,13 +1,23 @@
 import { projects } from "@/data/projects";
 
-export function ProjectList({ limit }: { limit?: number }) {
+export function ProjectList({
+  limit,
+  compact = false,
+}: {
+  limit?: number;
+  compact?: boolean;
+}) {
   const visibleProjects = limit ? projects.slice(0, limit) : projects;
 
   return (
     <div>
       {visibleProjects.map((project) => (
         <article
-          className="project-row grid gap-7 border-t border-line py-10 sm:grid-cols-[4rem_1fr_0.65fr] sm:py-14"
+          className={`project-row grid gap-7 border-t border-line ${
+            compact
+              ? "py-8 sm:grid-cols-[4rem_1fr_12rem] sm:py-10"
+              : "py-10 sm:grid-cols-[4rem_1fr_0.65fr] sm:py-14"
+          }`}
           key={project.number}
         >
           <p className="font-display text-2xl italic text-accent">
@@ -28,9 +38,11 @@ export function ProjectList({ limit }: { limit?: number }) {
             <p className="max-w-xl text-xl leading-relaxed">
               {project.summary}
             </p>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
-              {project.detail}
-            </p>
+            {!compact && (
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
+                {project.detail}
+              </p>
+            )}
             {project.href && (
               <a
                 className="text-link mt-7 inline-block text-sm font-bold"
@@ -43,7 +55,9 @@ export function ProjectList({ limit }: { limit?: number }) {
             )}
           </div>
           <div
-            className="project-preview text-ink"
+            className={`project-preview text-ink ${
+              compact ? "min-h-40" : ""
+            }`}
             aria-hidden="true"
           />
         </article>

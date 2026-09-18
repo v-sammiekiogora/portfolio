@@ -3,7 +3,6 @@ import { Currently } from "@/components/Currently";
 import { Hero } from "@/components/Hero";
 import { Intro } from "@/components/Intro";
 import { Notes } from "@/components/Notes";
-import { PhotoStrip } from "@/components/PhotoStrip";
 import { ProjectList } from "@/components/ProjectList";
 
 export default function Home() {
@@ -12,7 +11,7 @@ export default function Home() {
       <Hero />
       <Currently compact />
       <Intro />
-      <section className="site-shell py-20 sm:py-28">
+      <section className="site-shell py-16 sm:py-20">
         <div className="mb-12 flex items-end justify-between gap-6">
           <div>
             <p className="eyebrow">Selected archive</p>
@@ -22,9 +21,12 @@ export default function Home() {
             See everything →
           </Link>
         </div>
-        <ProjectList limit={3} />
+        <ProjectList limit={2} compact />
+        <Link className="text-link mt-8 inline-block text-sm font-bold" href="/things">
+          See the full archive →
+        </Link>
       </section>
-      <section className="site-shell py-20 sm:py-28">
+      <section className="site-shell py-16 sm:py-20">
         <div className="mb-12 grid gap-6 sm:grid-cols-2">
           <div>
             <p className="eyebrow">Open tabs in my head</p>
@@ -40,11 +42,10 @@ export default function Home() {
             finished.
           </p>
         </div>
-        <Notes limit={3} />
+        <Notes limit={2} />
       </section>
-      <PhotoStrip />
-      <section className="site-shell section-rule grid gap-8 py-20 sm:grid-cols-2 sm:py-28">
-        <h2 className="display text-5xl sm:text-7xl">Want the resume version?</h2>
+      <section className="site-shell section-rule grid gap-8 py-14 sm:grid-cols-2 sm:py-16">
+        <h2 className="display text-4xl sm:text-5xl">Want the resume version?</h2>
         <div className="max-w-lg self-end">
           <p className="mb-6 text-lg leading-relaxed">
             This site is about what I notice, make, and wonder about. For the

@@ -93,6 +93,7 @@ export function Hero() {
           <dd>Football, hiking, interesting places</dd>
         </div>
       </dl>
+      <footer className="home-copyright">© 2026 Sammy Mati</footer>
     </section>
   );
 }

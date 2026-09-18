@@ -35,18 +35,25 @@ export function Hero() {
         </p>
       </div>
 
-      <h1 className="display whitespace-nowrap text-[clamp(3.8rem,11.2vw,9rem)]">
+      <h1 className="display whitespace-nowrap text-[clamp(3.4rem,8.8vw,7.2rem)]">
         Sammy Mati<span className="text-accent">.</span>
       </h1>
 
       <div className="home-dashboard">
         <div className="home-statement">
-          <p className="eyebrow">A useful obsession</p>
-          <p className="max-w-md text-lg leading-relaxed sm:text-xl">
-            I like figuring out how things work, why they don’t, and how they
-            could work better.
+          <p className="eyebrow">The short version</p>
+          <p className="max-w-xl text-base leading-relaxed sm:text-lg">
+            I’m a Nairobi-based product and technology person. For nearly a
+            decade, I’ve worked where software, UX, data, AI, and people
+            overlap. Today, I help shape how developers discover and learn on
+            GitHub Learn.
           </p>
-          <p className="mt-5 text-xl">
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
+            I like useful questions, thoughtful interfaces, football, long
+            walks, and figuring out why things don’t work — then making them a
+            little better.
+          </p>
+          <p className="mt-4 border-t border-line pt-3 text-base">
             <span className="sr-only">Currently exploring new ideas.</span>
             <span aria-hidden="true">
               Currently{" "}

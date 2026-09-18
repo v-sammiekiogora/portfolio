@@ -5,7 +5,7 @@ export function Currently() {
     <div>
       {nowItems.map((item, index) => (
         <article
-          className="grid gap-4 border-t border-line py-8 sm:grid-cols-[4rem_12rem_1fr]"
+          className="grid gap-4 border-t border-line py-6 sm:grid-cols-[3rem_10rem_1fr]"
           key={item.label}
         >
           <p className="font-display text-xl italic text-accent">
@@ -14,7 +14,7 @@ export function Currently() {
           <h2 className="text-xs font-extrabold uppercase tracking-[0.12em]">
             {item.label}
           </h2>
-          <p className="max-w-2xl text-xl leading-relaxed sm:text-2xl">
+          <p className="max-w-2xl text-lg leading-relaxed">
             {item.value}
           </p>
         </article>

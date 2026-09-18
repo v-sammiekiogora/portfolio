@@ -16,7 +16,7 @@ export default function ThingsPage() {
         title="Things I’ve made"
         intro="Products, prototypes, experiments, and ideas — including the small ones that taught me something."
       />
-      <section className="site-shell pb-24">
+      <section className="site-shell pb-16">
         <ProjectList />
       </section>
     </main>

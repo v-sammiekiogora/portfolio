@@ -16,7 +16,7 @@ export function ProjectList({
           className={`project-row grid gap-7 border-t border-line ${
             compact
               ? "py-8 sm:grid-cols-[4rem_1fr_12rem] sm:py-10"
-              : "py-10 sm:grid-cols-[4rem_1fr_0.65fr] sm:py-14"
+              : "py-8 sm:grid-cols-[3rem_1fr_0.5fr] sm:py-10"
           }`}
           key={project.number}
         >
@@ -32,10 +32,10 @@ export function ProjectList({
                 <li key={tag}>{tag}</li>
               ))}
             </ul>
-            <h3 className="display mb-5 text-5xl sm:text-7xl">
+            <h3 className="display mb-4 text-4xl sm:text-5xl">
               {project.title}
             </h3>
-            <p className="max-w-xl text-xl leading-relaxed">
+            <p className="max-w-xl text-lg leading-relaxed">
               {project.summary}
             </p>
             {!compact && (

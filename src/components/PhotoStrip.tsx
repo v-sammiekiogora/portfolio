@@ -8,11 +8,11 @@ const photoIdeas = [
 
 export function PhotoStrip() {
   return (
-    <section className="site-shell py-20 sm:py-28">
-      <div className="mb-10 grid gap-4 sm:grid-cols-2">
+    <section className="site-shell py-14 sm:py-18">
+      <div className="mb-8 grid gap-4 sm:grid-cols-2">
         <div>
           <p className="eyebrow">Scenes along the way</p>
-          <h2 className="display text-5xl sm:text-7xl">A visual notebook.</h2>
+          <h2 className="display text-4xl sm:text-5xl">A visual notebook.</h2>
         </div>
         <p className="max-w-md self-end text-sm leading-relaxed text-muted sm:justify-self-end">
           Space for Nairobi, trails, journeys, football, and small details worth

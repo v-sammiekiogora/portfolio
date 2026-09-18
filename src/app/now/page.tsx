@@ -15,17 +15,17 @@ export default function NowPage() {
         title="What I’m up to"
         intro="A small, editable snapshot of where my attention is going these days."
       />
-      <section className="site-shell pb-24">
+      <section className="site-shell pb-16">
         <Currently />
       </section>
-      <section className="site-shell section-rule grid gap-8 py-20 sm:grid-cols-[1fr_2fr]">
+      <section className="site-shell section-rule grid gap-8 py-14 sm:grid-cols-[1fr_2fr]">
         <div>
           <p className="eyebrow">Currently</p>
-          <p className="font-display text-3xl italic text-accent">
+          <p className="font-display text-2xl italic text-accent">
             Subject to curiosity.
           </p>
         </div>
-        <div className="flex flex-wrap gap-x-7 gap-y-4 text-xl sm:text-3xl">
+        <div className="flex flex-wrap gap-x-5 gap-y-3 text-lg sm:text-xl">
           <span>Coffee + product discovery</span>
           <span className="text-accent">✦</span>
           <span>Learning data science</span>

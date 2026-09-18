@@ -155,8 +155,6 @@ a {
 .home-dashboard {
   display: grid;
   align-self: start;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
 }
 
 .home-statement {
@@ -170,11 +168,24 @@ a {
   position: relative;
   aspect-ratio: 3 / 2;
   overflow: hidden;
-  border-top: 1px solid var(--line);
-  background: #f8f4ec;
+  isolation: isolate;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 5%,
+    black 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 5%,
+    black 100%
+  );
 }
 
 .home-portrait img {
+  filter: saturate(0.94) contrast(0.98);
+  mix-blend-mode: multiply;
   object-fit: contain;
   object-position: center;
 }
@@ -189,8 +200,7 @@ a {
   }
 
   .home-portrait {
-    border-top: 0;
-    border-left: 1px solid var(--line);
+    margin-left: -1.5rem;
   }
 }
 

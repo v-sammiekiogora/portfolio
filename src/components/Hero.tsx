@@ -70,7 +70,7 @@ export function Hero() {
           className="home-portrait"
         >
           <Image
-            src="/sammy.png"
+            src="/sammy-skyline.png"
             alt="Sammy Mati smiling at his desk, surrounded by notes, books, plants, and a city view."
             fill
             priority

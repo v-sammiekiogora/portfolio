@@ -3,7 +3,7 @@ import { currentlyItems, nowItems } from "@/data/now";
 export function Currently({ compact = false }: { compact?: boolean }) {
   if (compact) {
     return (
-      <div className="marquee" aria-label="What Sammy is currently doing">
+      <div className="marquee" aria-label="What Sammy Mati is currently doing">
         <div className="marquee-track">
           {[...currentlyItems, ...currentlyItems].map((item, index) => (
             <span key={`${item}-${index}`}>{item}</span>

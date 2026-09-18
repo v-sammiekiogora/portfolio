@@ -14,7 +14,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About"
         title="A person, not a profile"
-        intro="I’m Sammy — a technology and product person from Nairobi, trying to stay curious and make useful things."
+        intro="I’m Sammy Mati — a technology and product person from Nairobi, trying to stay curious and make useful things."
       />
       <section className="site-shell section-rule grid gap-10 py-16 sm:grid-cols-[1fr_2fr] sm:py-24">
         <p className="font-display text-3xl italic">

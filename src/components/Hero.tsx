@@ -31,7 +31,7 @@ export function Hero() {
       <h1 className="display max-w-[1100px] text-[clamp(4.5rem,13.5vw,11.5rem)]">
         Hi, I’m
         <br />
-        Sammy<span className="text-accent">.</span>
+        Sammy Mati<span className="text-accent">.</span>
       </h1>
       <div className="grid items-end gap-6 border-t border-line pt-5 sm:grid-cols-2">
         <p className="max-w-lg text-lg leading-relaxed sm:text-xl">

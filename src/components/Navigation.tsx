@@ -16,7 +16,7 @@ export function Navigation() {
         className="font-display text-xl font-semibold tracking-[-0.04em] no-underline"
         aria-label="Sammy Mati, home"
       >
-        Sammy<span className="text-accent">.</span>
+        Sammy Mati<span className="text-accent">.</span>
       </Link>
       <nav aria-label="Primary navigation">
         <ul className="flex max-w-2xl flex-wrap justify-end gap-x-4 gap-y-2 text-[0.68rem] font-bold tracking-[0.08em] uppercase sm:gap-x-6">

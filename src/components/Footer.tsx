@@ -33,14 +33,6 @@ export function Footer() {
               >
                 GitHub ↗
               </a>
-              <a
-                className="text-link"
-                href="https://medium.com/@sammymati"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Medium ↗
-              </a>
             </div>
           </div>
         </div>

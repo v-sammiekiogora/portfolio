@@ -16,7 +16,6 @@ Open [http://localhost:3000](http://localhost:3000).
 The primary content is intentionally kept separate from the page layouts:
 
 - `src/data/projects.ts` — projects, experiments, and ideas
-- `src/data/notes.ts` — notebook entries and future native-post slugs
 - `src/data/now.ts` — current focus and the scrolling “Currently” list
 
 Shared UI lives in `src/components`, and route-level composition lives in `src/app`.

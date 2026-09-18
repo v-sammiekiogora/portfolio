@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Currently } from "@/components/Currently";
 import { Hero } from "@/components/Hero";
 import { Intro } from "@/components/Intro";
-import { Notes } from "@/components/Notes";
 import { ProjectList } from "@/components/ProjectList";
 
 export default function Home() {
@@ -25,24 +24,6 @@ export default function Home() {
         <Link className="text-link mt-8 inline-block text-sm font-bold" href="/things">
           See the full archive →
         </Link>
-      </section>
-      <section className="site-shell py-16 sm:py-20">
-        <div className="mb-12 grid gap-6 sm:grid-cols-2">
-          <div>
-            <p className="eyebrow">Open tabs in my head</p>
-            <h2 className="display text-6xl sm:text-8xl">
-              Things I’ve been
-              <br />
-              thinking about.
-            </h2>
-          </div>
-          <p className="max-w-md self-end text-sm leading-relaxed text-muted sm:justify-self-end">
-            Product observations, AI questions, useful discoveries, and lessons
-            from building. Notes in progress, because thinking rarely arrives
-            finished.
-          </p>
-        </div>
-        <Notes limit={2} />
       </section>
       <section className="site-shell section-rule grid gap-8 py-14 sm:grid-cols-2 sm:py-16">
         <h2 className="display text-4xl sm:text-5xl">Want the resume version?</h2>

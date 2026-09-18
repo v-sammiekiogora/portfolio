@@ -3,7 +3,6 @@ import Link from "next/link";
 const links = [
   { label: "About", href: "/about" },
   { label: "Now", href: "/now" },
-  { label: "Contact", href: "/about#contact" },
 ];
 
 export function Navigation() {
@@ -25,6 +24,11 @@ export function Navigation() {
               </Link>
             </li>
           ))}
+          <li>
+            <a className="nav-link" href="mailto:sammiekiogora@gmail.com">
+              Contact
+            </a>
+          </li>
           <li>
             <a
               className="nav-link"

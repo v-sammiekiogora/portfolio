@@ -19,6 +19,12 @@ export function Footer() {
             <div className="flex flex-wrap gap-5 text-sm font-bold">
               <a
                 className="text-link"
+                href="mailto:sammiekiogora@gmail.com"
+              >
+                Email me ↗
+              </a>
+              <a
+                className="text-link"
                 href="https://www.linkedin.com/in/sammy-mati/"
                 target="_blank"
                 rel="noreferrer"

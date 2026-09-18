@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const thoughts = [
@@ -67,27 +66,46 @@ export function Hero() {
           </p>
         </div>
 
-        <nav className="home-links" aria-label="Featured links">
-          <Link href="/about">
-            <span>01 · A little more human</span>
-            <strong>About me</strong>
-            <span aria-hidden="true">→</span>
-          </Link>
-          <a
-            href="https://medium.com/design-bootcamp/ux-case-study-designing-an-auto-garage-mobile-app-4abc11be152"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span>02 · Product / UX / Africa</span>
-            <strong>Autobuddy case study</strong>
-            <span aria-hidden="true">↗</span>
-          </a>
-          <Link href="/now">
-            <span>03 · Where attention is going</span>
-            <strong>What I’m up to</strong>
-            <span aria-hidden="true">→</span>
-          </Link>
-        </nav>
+        <div
+          className="home-illustration"
+          role="img"
+          aria-label="An abstract map of Sammy Mati’s curiosity, connecting Nairobi, product ideas, data, football, and the next hike."
+        >
+          <svg viewBox="0 0 640 360" aria-hidden="true">
+            <rect className="illustration-paper" x="0" y="0" width="640" height="360" />
+            <circle className="illustration-sun" cx="516" cy="74" r="42" />
+            <path
+              className="illustration-hills"
+              d="M0 278 C90 212 151 265 224 223 C304 178 352 266 427 216 C506 164 565 205 640 155 V360 H0 Z"
+            />
+            <path
+              className="illustration-route"
+              d="M75 282 C118 231 181 312 231 254 C277 202 328 257 367 198 C406 139 463 176 515 116"
+            />
+            <g className="illustration-node">
+              <circle cx="76" cy="282" r="10" />
+              <circle cx="231" cy="254" r="10" />
+              <circle cx="367" cy="198" r="10" />
+              <circle cx="515" cy="116" r="10" />
+            </g>
+            <g className="illustration-city">
+              <path d="M100 304 V237 H125 V304 M131 304 V264 H162 V304 M171 304 V220 H198 V304" />
+              <path d="M179 220 V194 M174 194 H184 M106 251 H119 M178 236 H191 M178 251 H191 M178 266 H191" />
+            </g>
+            <g className="illustration-ball">
+              <circle cx="304" cy="304" r="28" />
+              <path d="M304 288 L319 299 L313 316 H295 L289 299 Z M304 288 V278 M319 299 L329 294 M313 316 L320 326 M295 316 L287 326 M289 299 L279 294" />
+            </g>
+            <g className="illustration-data">
+              <path d="M424 285 V253 M447 285 V230 M470 285 V262 M493 285 V210" />
+              <path d="M413 285 H505" />
+            </g>
+            <text x="92" y="328">NAIROBI</text>
+            <text x="352" y="174">WHY?</text>
+            <text x="486" y="52">NEXT</text>
+          </svg>
+          <p>Ideas rarely travel in straight lines.</p>
+        </div>
       </div>
     </section>
   );

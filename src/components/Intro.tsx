@@ -9,14 +9,16 @@ export function Intro() {
       </div>
       <div className="max-w-3xl space-y-5 text-xl leading-[1.65] sm:text-[1.5rem]">
         <p>
-          I’m a technology person from Nairobi. My career has grown around
-          software, products, and people — the useful, complicated space where
-          those three meet.
+          I’m Sammy Mati, a curious builder from Nairobi. I’m drawn to the
+          hidden logic behind everyday things: the reason an interface feels
+          obvious, a system feels frustrating, or one good question changes
+          the direction of an idea.
         </p>
         <p>
-          I work on GitHub Learn, thinking about discovery, learning, and
-          making. I’m interested in technology, product, data, AI — and in
-          questions that lead somewhere useful.
+          My interests move between product, technology, data, AI, and people.
+          Some of that curiosity goes into GitHub Learn. The rest goes into
+          small experiments, learning new things, football, long walks, and
+          wondering what I should make next.
         </p>
         <Link className="text-link text-base font-bold" href="/about">
           More about me →

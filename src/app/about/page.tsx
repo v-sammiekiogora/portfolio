@@ -14,34 +14,72 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About"
         title="A person, not a profile"
-        intro="I’m Sammy Mati — a technology and product person from Nairobi, trying to stay curious and make useful things."
+        intro="I’m Sammy Mati. I ask a lot of questions, notice small details, and enjoy turning complicated things into something people can actually use."
       />
       <section className="site-shell section-rule grid gap-10 py-16 sm:grid-cols-[1fr_2fr] sm:py-24">
-        <p className="font-display text-3xl italic">
-          Work is one part of the story.
-        </p>
+        <div>
+          <p className="font-display text-3xl italic">
+            Curiosity is the through line.
+          </p>
+          <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted">
+            Work is one part of the story. The questions usually spill into
+            everything else.
+          </p>
+        </div>
         <div className="max-w-3xl space-y-7 text-xl leading-[1.75]">
           <p>
-            For nearly ten years, I’ve moved across product, technology, UX,
-            data, and AI. Not because I was collecting labels, but because I
-            kept following the questions: What are people trying to do? Where
-            are they getting stuck? What would make this clearer or more useful?
+            I’ve always liked figuring out how things work — and, perhaps more
+            importantly, why they sometimes don’t. I can spend a long time
+            pulling apart a product decision, following a strange pattern in
+            some data, or noticing the one step in an experience that makes
+            everything after it harder.
           </p>
           <p>
-            Today I’m a Program / Product Manager working on GitHub Learn. I
-            think about how developers discover learning, navigate it, and turn
-            an idea into something they can build.
+            Nairobi is home. It’s where I build, learn, watch the city move, and
+            keep finding reminders that useful technology has to understand the
+            real world around it — not an imaginary, frictionless version of
+            one.
           </p>
           <p>
-            I care about products that respect people’s attention. I like
-            details, honest constraints, thoughtful interfaces, and data that
-            helps us ask better questions rather than pretend we have perfect
-            answers.
+            Over nearly ten years, that curiosity has taken me through product,
+            technology, UX, data, and AI. These days, some of it goes into
+            GitHub Learn, where I think about how developers discover learning
+            and move from wanting to know something to actually making
+            something.
           </p>
           <p>
-            Outside that, there is football, hiking, coffee, Nairobi, and a
-            growing list of things I want to learn.
+            I’m less interested in technology for its own sake than in what it
+            helps people understand, change, or create. I like thoughtful
+            interfaces, honest constraints, useful data, and products that
+            respect people’s time.
           </p>
+          <p>
+            Curiosity doesn’t clock out. Away from a screen, you’ll find me
+            watching football, looking for the next hiking route, exploring an
+            interesting place, or paying attention to a detail I nearly walked
+            past.
+          </p>
+        </div>
+      </section>
+      <section className="site-shell section-rule py-16 sm:py-24">
+        <p className="eyebrow">A few things that feel like me</p>
+        <div className="grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ["Questions", "Usually more of them than answers — which is the interesting part."],
+            ["Making", "The quickest way I know to turn a vague thought into something real."],
+            ["Movement", "A football match, a trail, a walk through somewhere unfamiliar."],
+            ["Noticing", "Interfaces, patterns, people, and the details hiding in plain sight."],
+          ].map(([title, copy], index) => (
+            <article className="min-h-56 bg-paper p-6" key={title}>
+              <p className="font-display text-xl italic text-accent">
+                {String(index + 1).padStart(2, "0")}
+              </p>
+              <h2 className="mt-12 font-display text-3xl tracking-[-0.035em]">
+                {title}
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted">{copy}</p>
+            </article>
+          ))}
         </div>
       </section>
       <PhotoStrip />

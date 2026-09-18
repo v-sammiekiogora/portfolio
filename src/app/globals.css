@@ -154,7 +154,7 @@ a {
 
 .home-dashboard {
   display: grid;
-  align-self: stretch;
+  align-self: start;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -168,13 +168,14 @@ a {
 
 .home-portrait {
   position: relative;
-  min-height: 16rem;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   border-top: 1px solid var(--line);
+  background: #f8f4ec;
 }
 
 .home-portrait img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 

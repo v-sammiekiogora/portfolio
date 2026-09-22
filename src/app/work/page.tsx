@@ -7,7 +7,7 @@ import { workItems } from "@/data/work";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected product and technology work by Sammy Kiogora, with honest notes about what is documented and what is still being shaped.",
+    "Selected product and technology work by Sammy Mati, with honest notes about what is documented and what is still being shaped.",
   alternates: {
     canonical: `${site.url}/work`,
   },

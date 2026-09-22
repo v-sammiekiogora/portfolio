@@ -6,7 +6,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Notes",
   description:
-    "A future home for Sammy Kiogora’s notes on products, learning, AI, data, UX, technology, and building.",
+    "A future home for Sammy Mati’s notes on products, learning, AI, data, UX, technology, and building.",
   alternates: {
     canonical: `${site.url}/notes`,
   },

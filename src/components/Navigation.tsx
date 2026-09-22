@@ -41,10 +41,10 @@ export function Navigation() {
       <Link
         href="/"
         className="wordmark"
-        aria-label="Sammy Kiogora, home"
+        aria-label="Sammy Mati, home"
         onClick={closeMenu}
       >
-        Sammy Kiogora<span className="text-accent">.</span>
+        Sammy Mati<span className="text-accent">.</span>
       </Link>
       <button
         className="menu-toggle"

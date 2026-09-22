@@ -6,7 +6,7 @@ import { expertise, site, waysOfWorking } from "@/data/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "The story, product philosophy, and interests behind Sammy Kiogora’s work.",
+    "The story, product philosophy, and interests behind Sammy Mati’s work.",
   alternates: {
     canonical: `${site.url}/about`,
   },
@@ -18,7 +18,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About"
         title="A person, not a profile"
-        intro="I’m Sammy Kiogora. I ask a lot of questions, notice small details, and enjoy turning complicated things into something people can actually use."
+        intro="I’m Sammy Mati. I ask a lot of questions, notice small details, and enjoy turning complicated things into something people can actually use."
       />
 
       <section className="site-shell section-rule grid gap-8 py-12 sm:grid-cols-[0.65fr_1.35fr] sm:py-20">

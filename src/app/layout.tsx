@@ -18,15 +18,15 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Sammy Kiogora — Product, technology, data, and AI",
-    template: "%s — Sammy Kiogora",
+    default: "Sammy Mati — Product, technology, data, and AI",
+    template: "%s — Sammy Mati",
   },
   description: site.description,
   openGraph: {
-    title: "Sammy Kiogora",
+    title: "Sammy Mati",
     description: site.description,
     url: site.url,
-    siteName: "Sammy Kiogora",
+    siteName: "Sammy Mati",
     type: "website",
     locale: "en_KE",
     images: [
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: `${site.url}/sammy-skyline.png`,
         width: 1536,
         height: 1024,
-        alt: "Portrait illustration of Sammy Kiogora",
+        alt: "Portrait illustration of Sammy Mati",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sammy Kiogora",
+    title: "Sammy Mati",
     description: site.description,
     images: [`${site.url}/sammy-skyline.png`],
   },

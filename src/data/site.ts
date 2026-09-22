@@ -1,6 +1,6 @@
 export const site = {
-  name: "Sammy Kiogora",
-  shortName: "SK",
+  name: "Sammy Mati",
+  shortName: "SM",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
     "https://v-sammiekiogora.github.io/portfolio",
@@ -11,7 +11,7 @@ export const site = {
   autobuddy:
     "https://medium.com/design-bootcamp/ux-case-study-designing-an-auto-garage-mobile-app-4abc11be152",
   description:
-    "Sammy Kiogora builds products at the intersection of technology, data, AI, and people.",
+    "Sammy Mati builds products at the intersection of technology, data, AI, and people.",
 };
 
 export const waysOfWorking = [

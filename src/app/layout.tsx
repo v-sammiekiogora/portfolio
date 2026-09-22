@@ -4,6 +4,10 @@ import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 import "./globals.css";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  "https://v-sammiekiogora.github.io/portfolio";
+
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
@@ -15,7 +19,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sammymati.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Sammy Mati — Product, technology, and curiosity",
     template: "%s — Sammy Mati",

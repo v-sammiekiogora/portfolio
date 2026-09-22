@@ -12,6 +12,8 @@ const thoughts = [
   "planning the next hike.",
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function Hero() {
   const [index, setIndex] = useState(0);
 
@@ -70,7 +72,7 @@ export function Hero() {
           className="home-portrait"
         >
           <Image
-            src="/sammy-skyline.png"
+            src={`${basePath}/sammy-skyline.png`}
             alt="Sammy Mati smiling at his desk, surrounded by notes, books, plants, and a city view."
             fill
             priority

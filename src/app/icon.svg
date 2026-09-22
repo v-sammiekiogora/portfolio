@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#1c211d"/>
+  <text
+    x="32"
+    y="40"
+    fill="#f4f0e8"
+    font-family="Georgia, serif"
+    font-size="27"
+    font-weight="700"
+    letter-spacing="-2"
+    text-anchor="middle"
+  >SM</text>
+  <circle cx="53" cy="13" r="4" fill="#df4c2f"/>
+</svg>

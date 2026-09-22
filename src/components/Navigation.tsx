@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 const links = [
   { label: "About", href: "/about" },
@@ -6,20 +9,40 @@ const links = [
 ];
 
 export function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+  const closeMenu = () => setIsOpen(false);
+
   return (
-    <header className="site-shell flex items-start justify-between gap-6 py-5 sm:py-7">
+    <header className="site-header site-shell">
       <Link
         href="/"
-        className="font-display text-xl font-semibold tracking-[-0.04em] no-underline"
+        className="relative z-50 font-display text-xl font-semibold tracking-[-0.04em] no-underline"
         aria-label="Sammy Mati, home"
+        onClick={closeMenu}
       >
         Sammy Mati<span className="text-accent">.</span>
       </Link>
-      <nav aria-label="Primary navigation">
-        <ul className="flex max-w-2xl flex-wrap justify-end gap-x-4 gap-y-2 text-[0.68rem] font-bold tracking-[0.08em] uppercase sm:gap-x-6">
+      <button
+        className="menu-toggle"
+        type="button"
+        aria-expanded={isOpen}
+        aria-controls="primary-navigation"
+        onClick={() => setIsOpen((open) => !open)}
+      >
+        <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+      </button>
+      <nav
+        id="primary-navigation"
+        className="primary-navigation"
+        data-open={isOpen}
+        aria-label="Primary navigation"
+      >
+        <ul>
           {links.map((link) => (
             <li key={link.label}>
-              <Link className="nav-link" href={link.href}>
+              <Link className="nav-link" href={link.href} onClick={closeMenu}>
                 {link.label}
               </Link>
             </li>
@@ -30,6 +53,7 @@ export function Navigation() {
               href="mailto:sammiekiogora@gmail.com"
               target="_blank"
               rel="noreferrer"
+              onClick={closeMenu}
             >
               Contact
             </a>
@@ -40,6 +64,7 @@ export function Navigation() {
               href="https://medium.com/design-bootcamp/ux-case-study-designing-an-auto-garage-mobile-app-4abc11be152"
               target="_blank"
               rel="noreferrer"
+              onClick={closeMenu}
             >
               Case study ↗
             </a>
@@ -50,6 +75,7 @@ export function Navigation() {
               href="https://www.linkedin.com/in/sammy-mati/"
               target="_blank"
               rel="noreferrer"
+              onClick={closeMenu}
             >
               LinkedIn ↗
             </a>

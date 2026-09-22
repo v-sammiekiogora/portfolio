@@ -110,6 +110,83 @@ a {
   text-decoration-thickness: 2px;
 }
 
+.site-header {
+  position: relative;
+  z-index: 40;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 1.25rem;
+}
+
+.menu-toggle {
+  position: relative;
+  z-index: 50;
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-content: center;
+  gap: 0.35rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.menu-toggle > span:not(.sr-only) {
+  display: block;
+  width: 1rem;
+  height: 1px;
+  background: currentColor;
+  transition: transform 180ms ease;
+}
+
+.menu-toggle[aria-expanded="true"] > span:nth-of-type(2) {
+  transform: translateY(0.2rem) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] > span:nth-of-type(3) {
+  transform: translateY(-0.2rem) rotate(-45deg);
+}
+
+.primary-navigation {
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  left: -1rem;
+  display: none;
+  padding: 5.5rem 1rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: 0 1rem 2rem rgb(28 33 29 / 8%);
+}
+
+.primary-navigation[data-open="true"] {
+  display: block;
+}
+
+.primary-navigation ul {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.primary-navigation li {
+  border-top: 1px solid var(--line);
+}
+
+.primary-navigation a {
+  display: flex;
+  min-height: 3.5rem;
+  align-items: center;
+  font-family: var(--font-fraunces), serif;
+  font-size: 1.35rem;
+  font-weight: 520;
+}
+
 .nav-link {
   position: relative;
   text-decoration: none;
@@ -132,6 +209,48 @@ a {
 .nav-link:focus-visible::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+@media (min-width: 700px) {
+  .site-header {
+    padding-block: 1.75rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .primary-navigation,
+  .primary-navigation[data-open="true"] {
+    position: static;
+    display: block;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .primary-navigation ul {
+    display: flex;
+    max-width: 42rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem 1.5rem;
+  }
+
+  .primary-navigation li {
+    border: 0;
+  }
+
+  .primary-navigation a {
+    display: inline;
+    min-height: 0;
+    font-family: var(--font-manrope), sans-serif;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
 }
 
 .hero-word {

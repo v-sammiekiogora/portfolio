@@ -2,11 +2,8 @@ import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
+import { site } from "@/data/site";
 import "./globals.css";
-
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://v-sammiekiogora.github.io/portfolio";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -19,25 +16,33 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(site.url),
   title: {
-    default: "Sammy Mati — Product, technology, and curiosity",
-    template: "%s — Sammy Mati",
+    default: "Sammy Kiogora — Product, technology, data, and AI",
+    template: "%s — Sammy Kiogora",
   },
-  description:
-    "Sammy Mati is a product and technology person thinking about learning, data, AI, UX, and how things could work better.",
+  description: site.description,
   openGraph: {
-    title: "Sammy Mati",
-    description:
-      "Product, technology, data, AI, and the things I am curious about.",
+    title: "Sammy Kiogora",
+    description: site.description,
+    url: site.url,
+    siteName: "Sammy Kiogora",
     type: "website",
     locale: "en_KE",
+    images: [
+      {
+        url: `${site.url}/sammy-skyline.png`,
+        width: 1536,
+        height: 1024,
+        alt: "Portrait illustration of Sammy Kiogora",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sammy Mati",
-    description:
-      "Product, technology, data, AI, and the things I am curious about.",
+    title: "Sammy Kiogora",
+    description: site.description,
+    images: [`${site.url}/sammy-skyline.png`],
   },
 };
 

@@ -1,10 +1,7 @@
 import type { MetadataRoute } from "next";
+import { site } from "@/data/site";
 
 export const dynamic = "force-static";
-
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://v-sammiekiogora.github.io/portfolio";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -12,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: `${siteUrl}/sitemap.xml`,
+    sitemap: `${site.url}/sitemap.xml`,
   };
 }

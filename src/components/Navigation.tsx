@@ -1,26 +1,50 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 const links = [
+  { label: "Home", href: "/" },
+  { label: "Work", href: "/work" },
   { label: "About", href: "/about" },
   { label: "Now", href: "/now" },
+  { label: "Notes", href: "/notes" },
 ];
 
 export function Navigation() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
   const closeMenu = () => setIsOpen(false);
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeMenu();
+    };
+    const onPointerDown = (event: PointerEvent) => {
+      if (!headerRef.current?.contains(event.target as Node)) closeMenu();
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("pointerdown", onPointerDown);
+    };
+  }, [isOpen]);
+
   return (
-    <header className="site-header site-shell">
+    <header ref={headerRef} className="site-header site-shell">
       <Link
         href="/"
-        className="relative z-50 font-display text-xl font-semibold tracking-[-0.04em] no-underline"
-        aria-label="Sammy Mati, home"
+        className="wordmark"
+        aria-label="Sammy Kiogora, home"
         onClick={closeMenu}
       >
-        Sammy Mati<span className="text-accent">.</span>
+        Sammy Kiogora<span className="text-accent">.</span>
       </Link>
       <button
         className="menu-toggle"
@@ -40,45 +64,33 @@ export function Navigation() {
         aria-label="Primary navigation"
       >
         <ul>
-          {links.map((link) => (
-            <li key={link.label}>
-              <Link className="nav-link" href={link.href} onClick={closeMenu}>
-                {link.label}
-              </Link>
-            </li>
-          ))}
+          {links.map((link) => {
+            const isActive =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
+
+            return (
+              <li key={link.label}>
+                <Link
+                  className="nav-link"
+                  href={link.href}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={closeMenu}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            );
+          })}
           <li>
-            <a
+            <Link
               className="nav-link"
-              href="mailto:sammiekiogora@gmail.com"
-              target="_blank"
-              rel="noreferrer"
+              href="/#contact-panel"
               onClick={closeMenu}
             >
               Contact
-            </a>
-          </li>
-          <li>
-            <a
-              className="nav-link"
-              href="https://medium.com/design-bootcamp/ux-case-study-designing-an-auto-garage-mobile-app-4abc11be152"
-              target="_blank"
-              rel="noreferrer"
-              onClick={closeMenu}
-            >
-              Case study ↗
-            </a>
-          </li>
-          <li>
-            <a
-              className="nav-link"
-              href="https://www.linkedin.com/in/sammy-mati/"
-              target="_blank"
-              rel="noreferrer"
-              onClick={closeMenu}
-            >
-              LinkedIn ↗
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

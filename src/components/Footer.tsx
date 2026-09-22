@@ -1,3 +1,5 @@
+import { site } from "@/data/site";
+
 export function Footer() {
   return (
     <footer id="contact" className="mt-12 bg-ink text-paper">
@@ -13,13 +15,13 @@ export function Footer() {
           </div>
           <div className="flex flex-col justify-end sm:items-end">
             <p className="mb-5 max-w-md text-base">
-              Product ideas, curious questions, a good hiking route, or a
-              football opinion. I’m listening.
+              Product ideas, developer experiences, curious questions, or a
+              thoughtful introduction. I’m listening.
             </p>
             <div className="flex flex-wrap gap-5 text-sm font-bold">
               <a
                 className="text-link"
-                href="mailto:sammiekiogora@gmail.com"
+                href={`mailto:${site.email}`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -27,7 +29,7 @@ export function Footer() {
               </a>
               <a
                 className="text-link"
-                href="https://www.linkedin.com/in/sammy-mati/"
+                href={site.linkedin}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -35,7 +37,7 @@ export function Footer() {
               </a>
               <a
                 className="text-link"
-                href="https://github.com/v-sammiekiogora"
+                href={site.github}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -45,8 +47,8 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 grid gap-4 border-t border-white/20 pt-5 text-[0.68rem] font-bold tracking-[0.08em] uppercase sm:grid-cols-3">
-          <p>© 2026 Sammy Mati</p>
-          <p>Product / Technology / Data / AI</p>
+          <p>© 2026 Sammy Kiogora</p>
+          <p>Product leadership / Developer experiences / AI / Data</p>
           <p className="sm:text-right">
             Made with curiosity, probably too much coffee, and code.
           </p>

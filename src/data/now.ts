@@ -5,9 +5,14 @@ export type NowItem = {
 
 export const nowItems: NowItem[] = [
   {
-    label: "Working on",
+    label: "Building",
     value:
       "GitHub Learn — especially how people discover what to learn and move from curiosity to making.",
+  },
+  {
+    label: "Thinking",
+    value:
+      "How product teams can make complexity visible without making the experience feel complicated.",
   },
   {
     label: "Learning",
@@ -18,6 +23,11 @@ export const nowItems: NowItem[] = [
     label: "Exploring",
     value:
       "How AI changes learning and the way people interact with technology.",
+  },
+  {
+    label: "Reading",
+    value:
+      "A reading list will appear here when there is something genuinely worth recommending.",
   },
   {
     label: "Outside work",

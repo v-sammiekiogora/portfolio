@@ -5,11 +5,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 const links = [
-  { label: "Home", href: "/" },
   { label: "Work", href: "/work" },
   { label: "About", href: "/about" },
   { label: "Now", href: "/now" },
-  { label: "Notes", href: "/notes" },
 ];
 
 export function Navigation() {
@@ -65,10 +63,7 @@ export function Navigation() {
       >
         <ul>
           {links.map((link) => {
-            const isActive =
-              link.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(link.href);
+            const isActive = pathname.startsWith(link.href);
 
             return (
               <li key={link.label}>
@@ -86,11 +81,22 @@ export function Navigation() {
           <li>
             <Link
               className="nav-link"
-              href="/#contact-panel"
+              href="/#contact"
               onClick={closeMenu}
             >
               Contact
             </Link>
+          </li>
+          <li>
+            <a
+              className="nav-link"
+              href="https://www.linkedin.com/in/sammy-mati/"
+              target="_blank"
+              rel="noreferrer"
+              onClick={closeMenu}
+            >
+              Resume ↗
+            </a>
           </li>
         </ul>
       </nav>

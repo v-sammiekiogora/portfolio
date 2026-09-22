@@ -16,7 +16,7 @@ export function Hero() {
           people.
         </p>
         <p className="hero-intro">
-          Over 10 years across software, QA, product management, UX, data, AI,
+          Experience across software, QA, product management, UX, data, AI,
           developer experiences, and technology platforms.
         </p>
         <p className="hero-focus">

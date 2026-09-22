@@ -56,31 +56,6 @@ export default function WorkPage() {
           </a>
         </div>
       </section>
-
-      <section className="contact-panel">
-        <div className="site-shell contact-panel-inner">
-          <div>
-            <p className="eyebrow">The chronology</p>
-            <h2 className="display text-4xl sm:text-6xl">
-              Want the resume version?
-            </h2>
-          </div>
-          <div>
-            <p>
-              LinkedIn has the career timeline. This space is for the product
-              thinking, decisions, and lessons around the work.
-            </p>
-            <a
-              className="button button-light"
-              href={site.linkedin}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open LinkedIn ↗
-            </a>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
 };
 
-const selectedWork = workItems.slice(0, 2);
+const selectedWork = workItems.filter((item) => item.slug === "github-learn");
 
 export default function Home() {
   const personJsonLd = {
@@ -101,7 +101,7 @@ export default function Home() {
             </article>
           ))}
           <article className="work-list-item">
-            <span>03</span>
+            <span>02</span>
             <div>
               <p className="eyebrow">Product · UX · Africa</p>
               <h3>

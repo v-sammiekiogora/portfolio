@@ -115,17 +115,6 @@ export const workItems: WorkItem[] = [
     ],
   },
   {
-    slug: "github-certifications",
-    title: "GitHub Certifications",
-    eyebrow: "Developer experiences · Learning",
-    summary:
-      "A selected-work story reserved for the product context, Sammy’s contribution, and verified outcomes.",
-    status: "Case study in progress",
-    themes: ["Context to add", "Role to add", "Evidence to add"],
-    featured: true,
-    sections: createPlaceholderSections(),
-  },
-  {
     slug: "creator-commerce",
     title: "Creator Commerce",
     eyebrow: "Product · Platforms",

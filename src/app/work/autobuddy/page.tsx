@@ -32,15 +32,6 @@ const productProcess = [
   "Iterate",
 ];
 
-const systemAreas = [
-  "Customers",
-  "Vehicles",
-  "Repair Orders",
-  "Mechanics",
-  "Inventory",
-  "Payments",
-];
-
 const workflows = [
   {
     number: "01",
@@ -200,11 +191,6 @@ export default function AutoBuddyPage() {
             </li>
           ))}
         </ol>
-        <ul className={styles.systemStrip} aria-label="Connected product areas">
-          {systemAreas.map((area) => (
-            <li key={area}>{area}</li>
-          ))}
-        </ul>
         <p className={styles.callout}>
           The goal was not simply to digitize individual tasks. It was to shape a
           connected workspace around garage operations.

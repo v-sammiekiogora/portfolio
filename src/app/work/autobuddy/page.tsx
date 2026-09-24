@@ -118,7 +118,7 @@ export default function AutoBuddyPage() {
               AutoBuddy · Product / UX case study
             </p>
             <h1 className={`display ${styles.heroTitle}`}>
-              Turning a garage&apos;s everyday operations into one product.
+              Turning an auto-garage&apos;s everyday operations into one product.
             </h1>
           </div>
           <figure className={styles.heroVisual}>

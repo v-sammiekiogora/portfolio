@@ -250,14 +250,14 @@
   display: grid;
   grid-column: 1 / -1;
   width: 100%;
-  max-width: 58rem;
+  max-width: 50rem;
   gap: 1.5rem;
   justify-self: center;
 }
 
 .productVisual {
   width: 100%;
-  max-width: 18rem;
+  max-width: 15rem;
   margin: 0;
   justify-self: center;
 }
@@ -274,6 +274,14 @@
   height: 100%;
   object-fit: cover;
   object-position: top;
+}
+
+.productVisualWide {
+  max-width: none;
+}
+
+.productVisualWide > div {
+  aspect-ratio: 1.94 / 1;
 }
 
 .productVisual figcaption {
@@ -425,6 +433,15 @@
   .visualGrid,
   .lessonGrid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .visualGrid {
+    grid-template-columns: repeat(2, minmax(0, 15rem));
+    justify-content: center;
+  }
+
+  .productVisualWide {
+    grid-column: 1 / -1;
   }
 
   .learningChain {

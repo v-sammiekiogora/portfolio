@@ -218,7 +218,9 @@ export default function AutoBuddyPage() {
         />
         <p className={`${styles.lead} ${styles.narrowCopy}`}>
           I translated the product system into a mobile-first experience that
-          brought the operation&apos;s recurring workflows closer together.
+          brought the operation&apos;s recurring workflows closer together. The
+          idea was to build AutoBuddy as a progressive web app (PWA), allowing
+          the same connected workspace to adapt across desktop and mobile.
         </p>
         <div className={styles.workflowGrid}>
           {workflows.map((workflow) => (
@@ -231,19 +233,21 @@ export default function AutoBuddyPage() {
           ))}
         </div>
         <div className={styles.visualGrid}>
-          <figure className={styles.productVisual}>
+          <figure
+            className={`${styles.productVisual} ${styles.productVisualWide}`}
+          >
             <div>
               <Image
-                alt="AutoBuddy dashboard showing garage performance cards, repair-order actions, and Popular Services"
-                height={694}
-                src={`${basePath}/work/autobuddy/dashboard-popular-services.png`}
-                width={310}
+                alt="Desktop AutoBuddy dashboard showing performance cards, repair-order actions, and Popular Services"
+                height={991}
+                src={`${basePath}/work/autobuddy/dashboard-popular-services-desktop.png`}
+                width={1921}
               />
             </div>
             <figcaption>
-              <span>01 · Garage dashboard</span>
-              Popular Services keeps recurring work close to the main repair-order
-              flow.
+              <span>01 · Popular Services across devices</span>
+              The PWA concept brought the same garage workspace to larger screens
+              while keeping recurring services close to the repair-order flow.
             </figcaption>
           </figure>
           <figure className={styles.productVisual}>

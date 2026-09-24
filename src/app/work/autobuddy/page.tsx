@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data/site";
+import { AutoBuddyGallery } from "./AutoBuddyGallery";
 import styles from "./page.module.css";
-
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
   title: "AutoBuddy product and UX case study",
@@ -218,55 +216,7 @@ export default function AutoBuddyPage() {
             </article>
           ))}
         </div>
-        <div className={styles.visualGrid}>
-          <figure
-            className={`${styles.productVisual} ${styles.productVisualWide}`}
-          >
-            <div>
-              <Image
-                alt="Desktop AutoBuddy dashboard showing performance cards, repair-order actions, and Popular Services"
-                height={991}
-                src={`${basePath}/work/autobuddy/dashboard-popular-services-desktop.png`}
-                width={1921}
-              />
-            </div>
-            <figcaption>
-              <span>01 · Popular Services across devices</span>
-              The PWA concept brought the same garage workspace to larger screens
-              while keeping recurring services close to the repair-order flow.
-            </figcaption>
-          </figure>
-          <figure className={styles.productVisual}>
-            <div>
-              <Image
-                alt="AutoBuddy Choose Service screen listing service options for a selected vehicle"
-                height={908}
-                src={`${basePath}/work/autobuddy/choose-service.png`}
-                width={410}
-              />
-            </div>
-            <figcaption>
-              <span>02 · Choose a service</span>
-              A focused step connects the selected vehicle to a reusable service
-              before assigning a mechanic.
-            </figcaption>
-          </figure>
-          <figure className={styles.productVisual}>
-            <div>
-              <Image
-                alt="AutoBuddy repair-order confirmation screen showing service, assigned mechanics, note, and spare parts"
-                height={855}
-                src={`${basePath}/work/autobuddy/repair-order-confirmation.png`}
-                width={408}
-              />
-            </div>
-            <figcaption>
-              <span>03 · Confirm the repair order</span>
-              Service, mechanics, notes, and spare parts come together for a final
-              review.
-            </figcaption>
-          </figure>
-        </div>
+        <AutoBuddyGallery />
       </section>
 
       <section className={`site-shell ${styles.section}`}>

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { site } from "@/data/site";
 import styles from "./page.module.css";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   title: "AutoBuddy product and UX case study",
   description:
@@ -20,7 +22,7 @@ const evidence = [
   ["Field insights", "Customers, mechanics, and owners"],
 ];
 
-const process = [
+const productProcess = [
   "Research",
   "Insights",
   "Opportunities",
@@ -191,7 +193,7 @@ export default function AutoBuddyPage() {
           rather than treating every garage task as a separate feature.
         </p>
         <ol className={styles.process} aria-label="Product design process">
-          {process.map((step, index) => (
+          {productProcess.map((step, index) => (
             <li key={step}>
               <span>{String(index + 1).padStart(2, "0")}</span>
               {step}
@@ -234,7 +236,7 @@ export default function AutoBuddyPage() {
               <Image
                 alt="AutoBuddy dashboard showing garage performance cards, repair-order actions, and Popular Services"
                 height={694}
-                src="/work/autobuddy/dashboard-popular-services.png"
+                src={`${basePath}/work/autobuddy/dashboard-popular-services.png`}
                 width={310}
               />
             </div>
@@ -249,7 +251,7 @@ export default function AutoBuddyPage() {
               <Image
                 alt="AutoBuddy Choose Service screen listing service options for a selected vehicle"
                 height={908}
-                src="/work/autobuddy/choose-service.png"
+                src={`${basePath}/work/autobuddy/choose-service.png`}
                 width={410}
               />
             </div>
@@ -264,7 +266,7 @@ export default function AutoBuddyPage() {
               <Image
                 alt="AutoBuddy repair-order confirmation screen showing service, assigned mechanics, note, and spare parts"
                 height={855}
-                src="/work/autobuddy/repair-order-confirmation.png"
+                src={`${basePath}/work/autobuddy/repair-order-confirmation.png`}
                 width={408}
               />
             </div>

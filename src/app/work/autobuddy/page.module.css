@@ -60,15 +60,8 @@
   display: block;
   width: 100%;
   height: auto;
-}
-
-.heroVisual figcaption {
-  margin-top: 0.5rem;
-  color: var(--muted);
-  font-size: 0.6rem;
-  font-weight: 750;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  filter: saturate(0.96) contrast(0.98);
+  mix-blend-mode: multiply;
 }
 
 .metadataStrip {

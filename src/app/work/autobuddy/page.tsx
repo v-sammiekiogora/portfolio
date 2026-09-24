@@ -130,10 +130,6 @@ export default function AutoBuddyPage() {
               src={`${basePath}/work/autobuddy/autobuddy-mobile-concept.webp`}
               width={3147}
             />
-            <figcaption>
-              AutoBuddy mobile concept · Onboarding, garage operations, and
-              service history
-            </figcaption>
           </figure>
         </div>
         <div className={styles.heroCopy}>

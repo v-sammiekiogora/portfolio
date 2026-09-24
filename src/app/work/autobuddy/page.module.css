@@ -4,15 +4,22 @@
 
 .hero {
   display: grid;
-  gap: 2rem 4rem;
+  gap: 2rem;
   padding-block: clamp(2rem, 5vw, 4.5rem) 0;
 }
 
 .backLink {
   display: inline-block;
-  margin-bottom: clamp(3rem, 6vw, 5rem);
+  justify-self: start;
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
   font-size: 0.72rem;
   font-weight: 800;
+}
+
+.heroLead {
+  display: grid;
+  gap: 2rem 3rem;
+  align-items: center;
 }
 
 .heroEyebrow {
@@ -27,6 +34,7 @@
 
 .heroCopy {
   max-width: 38rem;
+  justify-self: end;
   align-self: end;
   padding-left: 1.5rem;
   border-left: 2px solid var(--accent);
@@ -44,9 +52,8 @@
 }
 
 .heroVisual {
-  grid-column: 1 / -1;
-  width: min(100%, 58rem);
-  margin: 0.5rem auto 0;
+  width: 100%;
+  margin: 0;
 }
 
 .heroVisual img {
@@ -603,10 +610,13 @@
 }
 
 @media (min-width: 860px) {
-  .hero,
   .section,
   .closing {
     grid-template-columns: minmax(0, 0.9fr) minmax(20rem, 1.1fr);
+  }
+
+  .heroLead {
+    grid-template-columns: minmax(18rem, 0.8fr) minmax(0, 1.2fr);
   }
 
   .evidenceGrid,

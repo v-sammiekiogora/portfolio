@@ -109,16 +109,32 @@ export default function AutoBuddyPage() {
   return (
     <main id="main" className={styles.caseStudy}>
       <header className={`site-shell ${styles.hero}`}>
-        <div>
-          <Link className={`text-link ${styles.backLink}`} href="/work">
-            ← All work
-          </Link>
-          <p className={`eyebrow ${styles.heroEyebrow}`}>
-            AutoBuddy · Product / UX case study
-          </p>
-          <h1 className={`display ${styles.heroTitle}`}>
-            Turning a garage&apos;s everyday operations into one product.
-          </h1>
+        <Link className={`text-link ${styles.backLink}`} href="/work">
+          ← All work
+        </Link>
+        <div className={styles.heroLead}>
+          <div>
+            <p className={`eyebrow ${styles.heroEyebrow}`}>
+              AutoBuddy · Product / UX case study
+            </p>
+            <h1 className={`display ${styles.heroTitle}`}>
+              Turning a garage&apos;s everyday operations into one product.
+            </h1>
+          </div>
+          <figure className={styles.heroVisual}>
+            <Image
+              alt="Three AutoBuddy mobile product concepts showing onboarding, the garage dashboard, and vehicle service history"
+              height={1896}
+              priority
+              sizes="(min-width: 900px) 55vw, calc(100vw - 2rem)"
+              src={`${basePath}/work/autobuddy/autobuddy-mobile-concept.webp`}
+              width={3147}
+            />
+            <figcaption>
+              AutoBuddy mobile concept · Onboarding, garage operations, and
+              service history
+            </figcaption>
+          </figure>
         </div>
         <div className={styles.heroCopy}>
           <p>
@@ -131,20 +147,6 @@ export default function AutoBuddyPage() {
             through UX, prototyping and usability testing.
           </p>
         </div>
-        <figure className={styles.heroVisual}>
-          <Image
-            alt="Three AutoBuddy mobile product concepts showing onboarding, the garage dashboard, and vehicle service history"
-            height={1896}
-            priority
-            sizes="(min-width: 900px) 928px, calc(100vw - 2rem)"
-            src={`${basePath}/work/autobuddy/autobuddy-mobile-concept.webp`}
-            width={3147}
-          />
-          <figcaption>
-            AutoBuddy mobile concept · Onboarding, garage operations, and service
-            history
-          </figcaption>
-        </figure>
         <dl className={styles.metadataStrip}>
           <div>
             <dt>Shape</dt>

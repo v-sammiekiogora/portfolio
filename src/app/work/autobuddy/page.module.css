@@ -249,23 +249,31 @@
 .visualGrid {
   display: grid;
   grid-column: 1 / -1;
-  gap: 1rem;
+  width: 100%;
+  max-width: 58rem;
+  gap: 1.5rem;
+  justify-self: center;
 }
 
 .productVisual {
+  width: 100%;
+  max-width: 18rem;
   margin: 0;
+  justify-self: center;
 }
 
 .productVisual > div {
+  aspect-ratio: 9 / 19;
   overflow: hidden;
-  border: 1px solid var(--line);
   background: #eef0f2;
 }
 
 .productVisual img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .productVisual figcaption {

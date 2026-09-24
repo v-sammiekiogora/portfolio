@@ -105,24 +105,20 @@ export default function Home() {
             <div>
               <p className="eyebrow">Product · UX · Africa</p>
               <h3>
-                <a href={site.autobuddy} target="_blank" rel="noreferrer">
-                  Autobuddy
-                </a>
+                <Link href="/work/autobuddy">AutoBuddy</Link>
               </h3>
             </div>
             <p>
               A mobile-first automotive garage management concept with a
               published UX case study.
             </p>
-            <a
+            <Link
               className="work-list-arrow"
-              href={site.autobuddy}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Read the Autobuddy case study"
+              href="/work/autobuddy"
+              aria-label="View the AutoBuddy case study"
             >
-              ↗
-            </a>
+              →
+            </Link>
           </article>
         </div>
       </section>

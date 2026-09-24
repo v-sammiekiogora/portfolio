@@ -7,6 +7,7 @@ export const dynamic = "force-static";
 const routes = [
   "",
   "/work",
+  "/work/autobuddy",
   ...workItems.map((item) => `/work/${item.slug}`),
   "/about",
   "/now",

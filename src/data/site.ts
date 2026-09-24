@@ -9,7 +9,7 @@ export const site = {
   github: "https://github.com/v-sammiekiogora",
   linkedin: "https://www.linkedin.com/in/sammy-mati/",
   autobuddy:
-    "https://medium.com/design-bootcamp/ux-case-study-designing-an-auto-garage-mobile-app-4abc11be152",
+    "https://medium.com/design-bootcamp/ux-case-study-designing-an-auto-garage-mobile-app-4abc11be152f",
   description:
     "Sammy Mati builds products at the intersection of technology, data, AI, and people.",
 };

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
 import { WorkCard } from "@/components/WorkCard";
 import { site } from "@/data/site";
@@ -33,7 +34,7 @@ export default function WorkPage() {
       <section className="site-shell section-rule grid gap-8 py-14 sm:grid-cols-[0.65fr_1.35fr] sm:py-20">
         <div>
           <p className="eyebrow">Also in the archive</p>
-          <h2 className="display text-4xl sm:text-5xl">Autobuddy.</h2>
+          <h2 className="display text-4xl sm:text-5xl">AutoBuddy.</h2>
         </div>
         <div className="max-w-2xl">
           <p className="text-lg leading-relaxed">
@@ -41,19 +42,17 @@ export default function WorkPage() {
             African contexts in mind. This is the one project with an existing
             published case study.
           </p>
-          <ul className="tag-list" aria-label="Autobuddy topics">
+          <ul className="tag-list" aria-label="AutoBuddy topics">
             <li>Product</li>
             <li>UX</li>
             <li>Africa</li>
           </ul>
-          <a
+          <Link
             className="text-link font-extrabold"
-            href={site.autobuddy}
-            target="_blank"
-            rel="noreferrer"
+            href="/work/autobuddy"
           >
-            Read the Autobuddy case study ↗
-          </a>
+            Read the AutoBuddy case study →
+          </Link>
         </div>
       </section>
     </main>

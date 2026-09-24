@@ -252,41 +252,37 @@
   gap: 1rem;
 }
 
-.visualPlaceholder {
+.productVisual {
   margin: 0;
 }
 
-.visualPlaceholder > div {
-  display: grid;
-  min-height: 11rem;
-  place-content: center;
-  gap: 0.5rem;
-  border: 1px dashed var(--muted);
-  background:
-    linear-gradient(135deg, transparent 49.7%, var(--line) 50%, transparent 50.3%),
-    var(--soft);
-  text-align: center;
+.productVisual > div {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #eef0f2;
 }
 
-.visualPlaceholder span {
-  color: var(--accent);
-  font-family: var(--font-fraunces), serif;
-  font-style: italic;
+.productVisual img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.visualPlaceholder strong {
-  padding: 0.3rem 0.55rem;
-  background: var(--paper);
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.visualPlaceholder figcaption {
-  margin-top: 0.55rem;
+.productVisual figcaption {
+  margin-top: 0.7rem;
   color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.55;
+}
+
+.productVisual figcaption span {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--accent);
   font-size: 0.6rem;
-  font-weight: 750;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .testIntro {

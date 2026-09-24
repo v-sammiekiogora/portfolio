@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data/site";
 import styles from "./page.module.css";
@@ -228,31 +229,49 @@ export default function AutoBuddyPage() {
           ))}
         </div>
         <div className={styles.visualGrid}>
-          <figure className={styles.visualPlaceholder}>
-            <div aria-hidden="true">
-              <span>01</span>
-              <strong>Repair Orders</strong>
+          <figure className={styles.productVisual}>
+            <div>
+              <Image
+                alt="AutoBuddy dashboard showing garage performance cards, repair-order actions, and Popular Services"
+                height={694}
+                src="/work/autobuddy/dashboard-popular-services.png"
+                width={310}
+              />
             </div>
             <figcaption>
-              Image placeholder · Approved AutoBuddy capture to be added
+              <span>01 · Garage dashboard</span>
+              Popular Services keeps recurring work close to the main repair-order
+              flow.
             </figcaption>
           </figure>
-          <figure className={styles.visualPlaceholder}>
-            <div aria-hidden="true">
-              <span>02</span>
-              <strong>Popular Services</strong>
+          <figure className={styles.productVisual}>
+            <div>
+              <Image
+                alt="AutoBuddy Choose Service screen listing service options for a selected vehicle"
+                height={908}
+                src="/work/autobuddy/choose-service.png"
+                width={410}
+              />
             </div>
             <figcaption>
-              Image placeholder · Approved AutoBuddy capture to be added
+              <span>02 · Choose a service</span>
+              A focused step connects the selected vehicle to a reusable service
+              before assigning a mechanic.
             </figcaption>
           </figure>
-          <figure className={styles.visualPlaceholder}>
-            <div aria-hidden="true">
-              <span>03</span>
-              <strong>Connected workspace</strong>
+          <figure className={styles.productVisual}>
+            <div>
+              <Image
+                alt="AutoBuddy repair-order confirmation screen showing service, assigned mechanics, note, and spare parts"
+                height={855}
+                src="/work/autobuddy/repair-order-confirmation.png"
+                width={408}
+              />
             </div>
             <figcaption>
-              Image placeholder · Approved AutoBuddy capture to be added
+              <span>03 · Confirm the repair order</span>
+              Service, mechanics, notes, and spare parts come together for a final
+              review.
             </figcaption>
           </figure>
         </div>

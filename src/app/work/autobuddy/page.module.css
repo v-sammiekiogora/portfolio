@@ -43,6 +43,27 @@
   color: var(--muted);
 }
 
+.heroVisual {
+  grid-column: 1 / -1;
+  width: min(100%, 58rem);
+  margin: 0.5rem auto 0;
+}
+
+.heroVisual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.heroVisual figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.6rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .metadataStrip {
   display: grid;
   grid-column: 1 / -1;

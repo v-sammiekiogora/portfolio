@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data/site";
 import { AutoBuddyGallery } from "./AutoBuddyGallery";
 import styles from "./page.module.css";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
   title: "AutoBuddy product and UX case study",
@@ -128,6 +131,20 @@ export default function AutoBuddyPage() {
             through UX, prototyping and usability testing.
           </p>
         </div>
+        <figure className={styles.heroVisual}>
+          <Image
+            alt="Three AutoBuddy mobile product concepts showing onboarding, the garage dashboard, and vehicle service history"
+            height={1896}
+            priority
+            sizes="(min-width: 900px) 928px, calc(100vw - 2rem)"
+            src={`${basePath}/work/autobuddy/autobuddy-mobile-concept.webp`}
+            width={3147}
+          />
+          <figcaption>
+            AutoBuddy mobile concept · Onboarding, garage operations, and service
+            history
+          </figcaption>
+        </figure>
         <dl className={styles.metadataStrip}>
           <div>
             <dt>Shape</dt>

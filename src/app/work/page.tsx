@@ -1,58 +1,100 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHeader } from "@/components/PageHeader";
-import { WorkCard } from "@/components/WorkCard";
 import { site } from "@/data/site";
 import { workItems } from "@/data/work";
 
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected product and technology work by Sammy Mati, with honest notes about what is documented and what is still being shaped.",
+    "Selected product work by Sammy Mati across developer learning and automotive services.",
   alternates: {
     canonical: `${site.url}/work`,
   },
 };
 
+const githubLearn = workItems.find((item) => item.slug === "github-learn");
+
+if (!githubLearn) {
+  throw new Error("GitHub Learn work item is required for the Work index.");
+}
+
+const projects = [
+  {
+    title: githubLearn.title,
+    eyebrow: githubLearn.eyebrow,
+    summary: githubLearn.summary,
+    status: githubLearn.status,
+    href: `/work/${githubLearn.slug}`,
+  },
+  {
+    title: "AutoBuddy",
+    eyebrow: "Product · UX · Africa",
+    summary:
+      "A mobile-first automotive garage management concept designed with African contexts in mind.",
+    status: "Published case study",
+    href: "/work/autobuddy",
+  },
+] as const;
+
 export default function WorkPage() {
   return (
     <main id="main">
-      <PageHeader
-        eyebrow="Selected work"
-        title="Work, with the rough edges left in"
-        intro="Product stories about learning, developer experiences, platforms, and commerce. I only claim what I can explain; the rest is clearly marked as work in progress."
-      />
-
-      <section className="site-shell pb-16 sm:pb-24" aria-label="Case studies">
-        <div className="work-grid">
-          {workItems.map((item, index) => (
-            <WorkCard item={item} index={index} key={item.slug} />
-          ))}
+      <header className="site-shell work-index-header">
+        <p className="eyebrow">Selected work</p>
+        <div className="work-index-intro">
+          <h1 className="display">
+            Work<span className="text-accent">.</span>
+          </h1>
+          <p>
+            Product stories spanning developer learning and automotive
+            services, shared with the context and evidence available.
+          </p>
         </div>
+      </header>
+
+      <section className="site-shell work-index" aria-labelledby="work-index-title">
+        <h2 className="sr-only" id="work-index-title">
+          Project archive
+        </h2>
+        {projects.map((project, index) => (
+          <article className="work-index-row" key={project.href}>
+            <div className="work-index-number" aria-hidden="true">
+              {String(index + 1).padStart(2, "0")}
+            </div>
+            <div className="work-index-title">
+              <p className="eyebrow">{project.eyebrow}</p>
+              <h3>
+                <Link href={project.href}>{project.title}</Link>
+              </h3>
+            </div>
+            <div className="work-index-detail">
+              <p className="work-index-summary">{project.summary}</p>
+              <p className="work-index-status">{project.status}</p>
+            </div>
+            <Link
+              className="work-index-link"
+              href={project.href}
+              aria-label={`Read the ${project.title} case study`}
+            >
+              <span>View case study</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+          </article>
+        ))}
       </section>
 
-      <section className="site-shell section-rule grid gap-8 py-14 sm:grid-cols-[0.65fr_1.35fr] sm:py-20">
+      <section className="site-shell work-index-close">
+        <p className="eyebrow">The short version</p>
         <div>
-          <p className="eyebrow">Also in the archive</p>
-          <h2 className="display text-4xl sm:text-5xl">AutoBuddy.</h2>
-        </div>
-        <div className="max-w-2xl">
-          <p className="text-lg leading-relaxed">
-            A mobile-first automotive garage management concept designed with
-            African contexts in mind. This is the one project with an existing
-            published case study.
-          </p>
-          <ul className="tag-list" aria-label="AutoBuddy topics">
-            <li>Product</li>
-            <li>UX</li>
-            <li>Africa</li>
-          </ul>
-          <Link
-            className="text-link font-extrabold"
-            href="/work/autobuddy"
+          <h2 className="display">Prefer the one-page read?</h2>
+          <a
+            className="text-link"
+            href={site.linkedin}
+            target="_blank"
+            rel="noreferrer"
           >
-            Read the AutoBuddy case study →
-          </Link>
+            View my resume on LinkedIn ↗
+          </a>
         </div>
       </section>
     </main>

@@ -35,71 +35,73 @@ export function Navigation() {
   }, [isOpen]);
 
   return (
-    <header ref={headerRef} className="site-header site-shell">
-      <Link
-        href="/"
-        className="wordmark"
-        aria-label="Sammy Mati, home"
-        onClick={closeMenu}
-      >
-        Sammy Mati<span className="text-accent">.</span>
-      </Link>
-      <button
-        className="menu-toggle"
-        type="button"
-        aria-expanded={isOpen}
-        aria-controls="primary-navigation"
-        onClick={() => setIsOpen((open) => !open)}
-      >
-        <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
-        <span aria-hidden="true" />
-        <span aria-hidden="true" />
-      </button>
-      <nav
-        id="primary-navigation"
-        className="primary-navigation"
-        data-open={isOpen}
-        aria-label="Primary navigation"
-      >
-        <ul>
-          {links.map((link) => {
-            const isActive = pathname.startsWith(link.href);
+    <header ref={headerRef} className="site-header">
+      <div className="site-header-inner site-shell">
+        <Link
+          href="/"
+          className="wordmark"
+          aria-label="Sammy Mati, home"
+          onClick={closeMenu}
+        >
+          Sammy Mati<span className="text-accent">.</span>
+        </Link>
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-expanded={isOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setIsOpen((open) => !open)}
+        >
+          <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+        </button>
+        <nav
+          id="primary-navigation"
+          className="primary-navigation"
+          data-open={isOpen}
+          aria-label="Primary navigation"
+        >
+          <ul>
+            {links.map((link) => {
+              const isActive = pathname.startsWith(link.href);
 
-            return (
-              <li key={link.label}>
-                <Link
-                  className="nav-link"
-                  href={link.href}
-                  aria-current={isActive ? "page" : undefined}
-                  onClick={closeMenu}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            );
-          })}
-          <li>
-            <Link
-              className="nav-link"
-              href="/#contact"
-              onClick={closeMenu}
-            >
-              Contact
-            </Link>
-          </li>
-          <li>
-            <a
-              className="nav-link"
-              href="https://www.linkedin.com/in/sammy-mati/"
-              target="_blank"
-              rel="noreferrer"
-              onClick={closeMenu}
-            >
-              Resume ↗
-            </a>
-          </li>
-        </ul>
-      </nav>
+              return (
+                <li key={link.label}>
+                  <Link
+                    className="nav-link"
+                    href={link.href}
+                    aria-current={isActive ? "page" : undefined}
+                    onClick={closeMenu}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
+            <li>
+              <Link
+                className="nav-link"
+                href="/#contact"
+                onClick={closeMenu}
+              >
+                Contact
+              </Link>
+            </li>
+            <li>
+              <a
+                className="nav-link"
+                href="https://www.linkedin.com/in/sammy-mati/"
+                target="_blank"
+                rel="noreferrer"
+                onClick={closeMenu}
+              >
+                Resume ↗
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }

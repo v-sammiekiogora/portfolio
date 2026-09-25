@@ -176,8 +176,15 @@ a {
 }
 
 .site-header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  border-bottom: 1px solid transparent;
+  background: var(--paper);
+}
+
+.site-header-inner {
   position: relative;
-  z-index: 40;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -995,7 +1002,7 @@ a {
 }
 
 @media (min-width: 700px) {
-  .site-header {
+  .site-header-inner {
     min-height: 6rem;
   }
 

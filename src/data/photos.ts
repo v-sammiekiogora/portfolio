@@ -6,7 +6,7 @@ export type PersonalPhoto = {
 
 export const personalPhotos: PersonalPhoto[] = [
   {
-    title: "A new addition to our growing family",
+    title: "Our family grows",
     alt: "A baby’s hand holding Sammy’s finger",
     src: "/photos/new-chapter.jpg",
   },

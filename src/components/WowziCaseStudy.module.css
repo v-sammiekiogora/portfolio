@@ -4,76 +4,84 @@
 
 .hero {
   display: grid;
-  gap: 1.5rem;
-  padding-block: clamp(2.5rem, 6vw, 5rem);
+  gap: clamp(0.85rem, 1.5vw, 1.25rem);
+  padding-block: clamp(1.5rem, 3vw, 2.75rem);
 }
 
 .backLink {
   justify-self: start;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
   font-size: 0.72rem;
   font-weight: 800;
 }
 
+.heroKicker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  align-items: center;
+}
+
+.heroKicker p {
+  margin: 0;
+}
+
 .heroBrand {
   display: flex;
-  gap: 0.8rem;
+  gap: 0.65rem;
   align-items: center;
 }
 
 .heroBrand img {
-  width: 2.65rem;
+  width: 2.2rem;
   height: auto;
 }
 
 .heroBrand span {
   font-family: var(--font-fraunces), serif;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 650;
   letter-spacing: -0.04em;
 }
 
 .heroGrid {
   display: grid;
-  gap: 2rem 4rem;
+  gap: 1.25rem 4rem;
+  align-items: end;
 }
 
 .heroTitle {
-  max-width: 15ch;
-  font-size: clamp(3rem, 7vw, 6.5rem);
-  line-height: 0.94;
+  max-width: 12ch;
+  font-size: clamp(2.75rem, 5.7vw, 5.25rem);
+  line-height: 0.92;
 }
 
 .heroCopy {
-  max-width: 38rem;
+  max-width: 34rem;
   align-self: end;
   border-left: 3px solid var(--accent);
   padding-left: 1.25rem;
-  font-size: clamp(1rem, 1.4vw, 1.16rem);
-  line-height: 1.7;
+  font-size: clamp(0.95rem, 1.25vw, 1.08rem);
+  line-height: 1.6;
 }
 
 .heroCopy p {
   margin: 0;
 }
 
-.heroCopy p + p {
-  margin-top: 1rem;
-  color: var(--muted);
-}
-
 .metadata,
 .scaleGrid {
   display: grid;
   gap: 1px;
-  margin: 1.5rem 0 0;
+  margin: 0.5rem 0 0;
   border: 1px solid var(--line);
   background: var(--line);
 }
 
 .metadata > div,
 .scaleGrid > div {
-  padding: 1.1rem 1.2rem;
+  padding: 0.85rem 1rem;
   background: var(--paper);
 }
 
@@ -96,7 +104,7 @@
 }
 
 .scaleSection {
-  padding-block: 2rem var(--case-space);
+  padding-block: 1rem var(--case-space);
 }
 
 .scaleIntro {

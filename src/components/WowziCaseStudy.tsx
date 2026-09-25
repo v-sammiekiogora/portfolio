@@ -158,30 +158,28 @@ export function WowziCaseStudy() {
         <Link className={`text-link ${styles.backLink}`} href="/work">
           ← All work
         </Link>
-        <div className={styles.heroBrand}>
-          <Image
-            alt=""
-            aria-hidden="true"
-            height={57}
-            priority
-            src={`${basePath}/work/wowzi/wowzi-logo.svg`}
-            width={59}
-          />
-          <span>Wowzi</span>
+        <div className={styles.heroKicker}>
+          <div className={styles.heroBrand}>
+            <Image
+              alt=""
+              aria-hidden="true"
+              height={57}
+              priority
+              src={`${basePath}/work/wowzi/wowzi-logo.svg`}
+              width={59}
+            />
+            <span>Wowzi</span>
+          </div>
+          <p className="eyebrow">Lead Product Manager case study</p>
         </div>
-        <p className="eyebrow">Wowzi · Lead Product Manager case study</p>
         <div className={styles.heroGrid}>
           <h1 className={`display ${styles.heroTitle}`}>
-            Transforming an established creator-commerce platform for scale.
+            Evolving creator commerce for scale.
           </h1>
           <div className={styles.heroCopy}>
             <p>
-              Wowzi is an African creator-commerce platform connecting brands
-              with creators to run large-scale campaigns.
-            </p>
-            <p>
-              I joined an established product and helped evolve both the
-              experience and the way it was built—using research, product
+              Wowzi connects African creators and brands at scale. I helped
+              evolve the product and how it was built through research,
               strategy, UX leadership, and cross-functional delivery.
             </p>
           </div>

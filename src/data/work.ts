@@ -20,7 +20,10 @@ export type WorkItem = {
   title: string;
   eyebrow: string;
   summary: string;
-  status: "Case study in progress" | "Story in progress";
+  status:
+    | "Case study in progress"
+    | "Story in progress"
+    | "Published case study";
   themes: string[];
   featured: boolean;
   sections: WorkSection[];
@@ -116,12 +119,18 @@ export const workItems: WorkItem[] = [
   },
   {
     slug: "creator-commerce",
-    title: "Creator Commerce",
-    eyebrow: "Product · Platforms",
+    title: "Wowzi",
+    eyebrow: "Lead Product Management · Creator commerce",
     summary:
-      "A selected-work story in progress. Details will be published when the context and evidence are ready.",
-    status: "Story in progress",
-    themes: ["Context to add", "Role to add", "Evidence to add"],
+      "Evolving an established two-sided creator-commerce platform—and the way it was built.",
+    status: "Published case study",
+    themes: [
+      "Product strategy",
+      "User research",
+      "Design systems",
+      "Team leadership",
+      "Cross-functional delivery",
+    ],
     featured: true,
     sections: createPlaceholderSections(),
   },

@@ -13,9 +13,10 @@ export const metadata: Metadata = {
 };
 
 const githubLearn = workItems.find((item) => item.slug === "github-learn");
+const wowzi = workItems.find((item) => item.slug === "creator-commerce");
 
-if (!githubLearn) {
-  throw new Error("GitHub Learn work item is required for the Work index.");
+if (!githubLearn || !wowzi) {
+  throw new Error("GitHub Learn and Wowzi work items are required.");
 }
 
 const projects = [
@@ -34,6 +35,13 @@ const projects = [
     status: "Published case study",
     href: "/work/autobuddy",
   },
+  {
+    title: wowzi.title,
+    eyebrow: wowzi.eyebrow,
+    summary: wowzi.summary,
+    status: wowzi.status,
+    href: `/work/${wowzi.slug}`,
+  },
 ] as const;
 
 export default function WorkPage() {
@@ -46,8 +54,8 @@ export default function WorkPage() {
             Work<span className="text-accent">.</span>
           </h1>
           <p>
-            Product stories spanning developer learning and automotive
-            services, shared with the context and evidence available.
+            Product stories spanning developer learning, creator commerce, and
+            automotive services—shared with the context and evidence available.
           </p>
         </div>
       </header>

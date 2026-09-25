@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { WowziCaseStudy } from "@/components/WowziCaseStudy";
 import { site } from "@/data/site";
 import { workItems } from "@/data/work";
 
@@ -39,6 +40,10 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
 
   if (!item) {
     notFound();
+  }
+
+  if (item.slug === "creator-commerce") {
+    return <WowziCaseStudy />;
   }
 
   const relatedItems = workItems

@@ -1,0 +1,506 @@
+.caseStudy {
+  --case-space: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.hero {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+
+.backLink {
+  justify-self: start;
+  margin-bottom: 1rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.heroGrid {
+  display: grid;
+  gap: 2rem 4rem;
+}
+
+.heroTitle {
+  max-width: 15ch;
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.94;
+}
+
+.heroCopy {
+  max-width: 38rem;
+  align-self: end;
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
+  line-height: 1.7;
+}
+
+.heroCopy p {
+  margin: 0;
+}
+
+.heroCopy p + p {
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
+.metadata,
+.scaleGrid {
+  display: grid;
+  gap: 1px;
+  margin: 1.5rem 0 0;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.metadata > div,
+.scaleGrid > div {
+  padding: 1.1rem 1.2rem;
+  background: var(--paper);
+}
+
+.metadata dt,
+.scaleIntro p:first-child,
+.foundationGrid span,
+.operatingModel span,
+.initiativeGrid strong {
+  color: var(--accent);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.metadata dd {
+  margin: 0.45rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 750;
+}
+
+.scaleSection {
+  padding-block: 2rem var(--case-space);
+}
+
+.scaleIntro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  align-items: end;
+}
+
+.scaleIntro p {
+  margin: 0;
+}
+
+.scaleIntro p:last-child {
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+
+.scaleGrid dt {
+  font-family: var(--font-fraunces), serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.scaleGrid dd {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.section {
+  display: grid;
+  gap: 2.5rem 4rem;
+  padding-block: var(--case-space);
+  border-top: 1px solid var(--line);
+}
+
+.sectionHeader {
+  max-width: 40rem;
+}
+
+.sectionTitle {
+  max-width: 14ch;
+  font-size: clamp(2.35rem, 5vw, 4.4rem);
+  line-height: 0.98;
+}
+
+.challengeGrid,
+.roleGrid,
+.foundationGrid,
+.initiativeGrid,
+.lessonGrid {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.challengeGrid article,
+.roleGrid article,
+.foundationGrid article,
+.initiativeGrid article,
+.lessonGrid article {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--paper);
+}
+
+.challengeGrid h3,
+.roleGrid h3,
+.foundationGrid h3,
+.initiativeGrid h3,
+.lessonGrid h3,
+.marketplace h3 {
+  margin: 0.75rem 0;
+  font-family: var(--font-fraunces), serif;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  font-weight: 560;
+  line-height: 1.15;
+}
+
+.challengeGrid ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  list-style: none;
+}
+
+.challengeGrid li {
+  display: grid;
+  grid-template-columns: 0.75rem 1fr;
+  gap: 0.5rem;
+}
+
+.challengeGrid li::before {
+  color: var(--accent);
+  content: "↳";
+}
+
+.transformation {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.transformation span {
+  position: relative;
+  padding: 1rem 1.25rem;
+  background: var(--soft);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.transformation span:not(:last-child)::after {
+  position: absolute;
+  right: 1rem;
+  color: var(--accent);
+  content: "→";
+}
+
+.roleIntro {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+.roleIntro > p,
+.lead {
+  max-width: 42rem;
+  margin: 0;
+  font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+  line-height: 1.65;
+}
+
+.roleIntro > div {
+  display: grid;
+  gap: 0.45rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
+}
+
+.roleIntro strong {
+  font-family: var(--font-fraunces), serif;
+  font-size: 1.3rem;
+}
+
+.roleIntro span {
+  font-weight: 800;
+}
+
+.roleIntro small {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.roleGrid p,
+.foundationGrid p,
+.initiativeGrid p,
+.lessonGrid p,
+.marketplace p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.65;
+}
+
+.marketplace {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.marketplace article {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--paper);
+}
+
+.marketplace > div {
+  display: grid;
+  min-height: 8rem;
+  place-content: center;
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+}
+
+.marketplace > div span {
+  font-family: var(--font-fraunces), serif;
+  font-size: 2rem;
+}
+
+.marketplace > div small {
+  color: var(--accent);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.process {
+  display: grid;
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.process li {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.75rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.process span,
+.initiativeGrid > article > span,
+.lessonGrid > article > span {
+  color: var(--accent);
+  font-family: var(--font-fraunces), serif;
+  font-style: italic;
+}
+
+.competitiveLens,
+.impactNote {
+  grid-column: 1 / -1;
+  margin: 0;
+  border-left: 3px solid var(--accent);
+  background: var(--soft);
+  padding: 1rem 1.25rem;
+}
+
+.competitiveLens p {
+  margin: 0;
+}
+
+.competitiveLens p:last-child {
+  margin-top: 0.5rem;
+  font-family: var(--font-fraunces), serif;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.45;
+}
+
+.foundationCore {
+  background: var(--ink) !important;
+  color: var(--paper);
+}
+
+.foundationCore p {
+  color: rgb(244 240 232 / 70%);
+}
+
+.operatingModel {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.operatingModel > div {
+  padding: 1rem 1.2rem;
+  background: var(--soft);
+}
+
+.operatingModel p {
+  margin: 0.55rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.operatingModel small {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--muted);
+}
+
+.initiativeGrid article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.initiativeGrid h3 {
+  min-height: 2.3em;
+}
+
+.initiativeGrid strong {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.outcomeGrid {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: 1px;
+  margin: 0;
+  padding: 1px;
+  background: var(--line);
+  list-style: none;
+}
+
+.outcomeGrid li {
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  gap: 0.7rem;
+  padding: 1rem 1.15rem;
+  background: var(--paper);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.outcomeGrid li::before {
+  color: var(--accent);
+  content: "↳";
+}
+
+.impactNote {
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+
+.closing {
+  display: grid;
+  justify-items: start;
+  gap: 1.5rem;
+  padding-block: var(--case-space);
+  border-top: 1px solid var(--line);
+}
+
+.closing blockquote {
+  max-width: 58rem;
+  margin: 0;
+  font-family: var(--font-fraunces), serif;
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  font-weight: 520;
+  line-height: 1.15;
+}
+
+@media (min-width: 640px) {
+  .metadata {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .scaleGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .challengeGrid,
+  .roleGrid,
+  .foundationGrid,
+  .lessonGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .transformation,
+  .operatingModel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .marketplace {
+    grid-template-columns: 1fr 0.45fr 1fr;
+  }
+
+  .outcomeGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 850px) {
+  .heroGrid,
+  .section {
+    grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+  }
+
+  .heroCopy {
+    justify-self: end;
+  }
+
+  .scaleGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .challengeGrid,
+  .roleIntro {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .foundationGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .roleGrid,
+  .transformation {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .operatingModel,
+  .initiativeGrid,
+  .lessonGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .initiativeGrid h3 {
+    min-height: 3.5em;
+  }
+}

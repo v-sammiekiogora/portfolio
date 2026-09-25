@@ -23,7 +23,7 @@ export function Footer() {
                 className="text-link"
                 href={`mailto:${site.email}`}
               >
-                Email me
+                {site.email}
               </a>
               <a
                 className="text-link"

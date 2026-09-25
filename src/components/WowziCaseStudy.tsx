@@ -365,16 +365,18 @@ export function WowziCaseStudy() {
         </div>
       </section>
 
-      <section className={`site-shell ${styles.section}`}>
-        <SectionHeader
-          eyebrow="04 · Discovery"
-          title="Move product conversations from assumptions to evidence."
-        />
-        <p className={styles.lead}>
-          Decisions drew on creator and advertiser interviews, stakeholder
-          conversations, usability feedback, competitive research, business
-          requirements, and product data.
-        </p>
+      <section className={`site-shell ${styles.section} ${styles.discovery}`}>
+        <div className={styles.discoveryIntro}>
+          <div>
+            <p className="eyebrow">04 · Discovery</p>
+            <h2 className="display">Evidence, not assumptions.</h2>
+          </div>
+          <p>
+            Creator and advertiser interviews, stakeholder conversations,
+            usability feedback, competitive research, business requirements,
+            and product data informed decisions.
+          </p>
+        </div>
         <ol className={styles.process}>
           {discoveryProcess.map((step, index) => (
             <li key={step}>

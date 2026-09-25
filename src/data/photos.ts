@@ -6,6 +6,11 @@ export type PersonalPhoto = {
 
 export const personalPhotos: PersonalPhoto[] = [
   {
+    title: "A new addition to our growing family",
+    alt: "A baby’s hand holding Sammy’s finger",
+    src: "/photos/new-chapter.jpg",
+  },
+  {
     title: "On the farm",
     alt: "Sammy beside a tractor while working on the farm",
     src: "/photos/sammy-farming.jpg",
@@ -24,10 +29,5 @@ export const personalPhotos: PersonalPhoto[] = [
     title: "Somewhere interesting",
     alt: "Sammy visiting the Nairobi National Museum",
     src: "/photos/sammy-museum.jpg",
-  },
-  {
-    title: "A new chapter",
-    alt: "A baby’s hand holding Sammy’s finger",
-    src: "/photos/new-chapter.jpg",
   },
 ];

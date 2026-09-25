@@ -11,13 +11,18 @@ export const personalPhotos: PersonalPhoto[] = [
     src: "/photos/sammy-farming.jpg",
   },
   {
-    title: "Oldonyo Sabuk",
+    title: "After a hike",
     alt: "Sammy at the summit of Oldonyo Sabuk after a hike",
     src: "/photos/sammy-hiking.jpg",
   },
   {
-    title: "At the coast",
+    title: "Travelling at the beach",
     alt: "Sammy standing at the shoreline on the Kenyan coast",
     src: "/photos/sammy-coast.jpg",
+  },
+  {
+    title: "Somewhere interesting",
+    alt: "Sammy visiting the Nairobi National Museum",
+    src: "/photos/sammy-museum.jpg",
   },
 ];

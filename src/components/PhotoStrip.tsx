@@ -52,8 +52,8 @@ export function PhotoStrip() {
           <h2 className="display compact-title">Away from the screen.</h2>
         </div>
         <p className="compact-copy">
-          Farming, hiking, the coast, and the places that remind me to slow
-          down and look around.
+          Farming, hiking, travelling, and interesting places that remind me
+          to slow down and look around.
         </p>
       </div>
       <div className="photo-grid">

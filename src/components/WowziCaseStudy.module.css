@@ -99,8 +99,6 @@
 
 .metadata dt,
 .scaleIntro p:first-child,
-.foundationGrid span,
-.operatingModel span,
 .initiativeGrid strong {
   color: var(--accent);
   font-size: 0.62rem;
@@ -172,9 +170,7 @@
 
 .challengeGrid,
 .roleGrid,
-.foundationGrid,
-.initiativeGrid,
-.lessonGrid {
+.initiativeGrid {
   display: grid;
   grid-column: 1 / -1;
   gap: 1px;
@@ -184,18 +180,14 @@
 
 .challengeGrid article,
 .roleGrid article,
-.foundationGrid article,
-.initiativeGrid article,
-.lessonGrid article {
+.initiativeGrid article {
   padding: clamp(1.25rem, 3vw, 2rem);
   background: var(--paper);
 }
 
 .challengeGrid h3,
 .roleGrid h3,
-.foundationGrid h3,
 .initiativeGrid h3,
-.lessonGrid h3,
 .marketplace h3 {
   margin: 0.75rem 0;
   font-family: var(--font-fraunces), serif;
@@ -285,9 +277,7 @@
 }
 
 .roleGrid p,
-.foundationGrid p,
 .initiativeGrid p,
-.lessonGrid p,
 .marketplace p {
   margin: 0;
   color: var(--muted);
@@ -472,8 +462,7 @@
 }
 
 .process span,
-.initiativeGrid > article > span,
-.lessonGrid > article > span {
+.initiativeGrid > article > span {
   color: var(--accent);
   font-family: var(--font-fraunces), serif;
   font-style: italic;
@@ -497,40 +486,6 @@
   font-size: 0.76rem;
   font-weight: 750;
   line-height: 1.6;
-}
-
-.foundationCore {
-  background: var(--ink) !important;
-  color: var(--paper);
-}
-
-.foundationCore p {
-  color: rgb(244 240 232 / 70%);
-}
-
-.operatingModel {
-  display: grid;
-  grid-column: 1 / -1;
-  gap: 1px;
-  border: 1px solid var(--line);
-  background: var(--line);
-}
-
-.operatingModel > div {
-  padding: 1rem 1.2rem;
-  background: var(--soft);
-}
-
-.operatingModel p {
-  margin: 0.55rem 0 0;
-  font-size: 0.78rem;
-  font-weight: 800;
-}
-
-.operatingModel small {
-  display: block;
-  margin-top: 0.35rem;
-  color: var(--muted);
 }
 
 .initiativeGrid article {
@@ -606,14 +561,11 @@
   }
 
   .challengeGrid,
-  .roleGrid,
-  .foundationGrid,
-  .lessonGrid {
+  .roleGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .transformation,
-  .operatingModel {
+  .transformation {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -653,18 +605,12 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .foundationGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .roleGrid,
   .transformation {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .operatingModel,
-  .initiativeGrid,
-  .lessonGrid {
+  .initiativeGrid {
     grid-template-columns: repeat(3, 1fr);
   }
 

@@ -83,21 +83,6 @@ const outcomes = [
   "Created clearer collaboration across Product, UX, QA, Engineering, and Data",
 ];
 
-const lessons = [
-  {
-    title: "Existing products need a different kind of leadership",
-    copy: "The work was not starting from zero. It was understanding what already existed, deciding what needed to change, and creating a path forward without disrupting an established platform.",
-  },
-  {
-    title: "Design systems are product infrastructure",
-    copy: "A shared foundation gives Product, UX, Engineering, and QA a common language for building and evolving the experience.",
-  },
-  {
-    title: "Scaling the product means scaling how it is built",
-    copy: "Moving toward internal engineering required stronger ownership, communication, process, and collaboration—not only a staffing change.",
-  },
-];
-
 const creatorScreens = [
   {
     src: "/work/wowzi/creator-verification.png",
@@ -396,55 +381,7 @@ export function WowziCaseStudy() {
 
       <section className={`site-shell ${styles.section}`}>
         <SectionHeader
-          eyebrow="05 · Product infrastructure"
-          title="A shared foundation for the experience and the team."
-        />
-        <div className={styles.foundationGrid}>
-          <article>
-            <span>Before</span>
-            <h3>Repeated decisions and inconsistent patterns.</h3>
-            <p>
-              Components, spacing, visual treatments, states, and interactions
-              varied across the product.
-            </p>
-          </article>
-          <article className={styles.foundationCore}>
-            <span>Design system</span>
-            <h3>Reusable patterns across mobile and web.</h3>
-            <p>
-              Typography, colour, buttons, forms, cards, navigation, tables,
-              modals, states, and responsive behavior.
-            </p>
-          </article>
-          <article>
-            <span>Application</span>
-            <h3>A common language for delivery.</h3>
-            <p>
-              Product, UX, Engineering, and QA could reason from the same
-              foundation as the experience evolved.
-            </p>
-          </article>
-        </div>
-        <div className={styles.operatingModel}>
-          <div>
-            <span>Before</span>
-            <p>Product → Offshore consulting team</p>
-          </div>
-          <div>
-            <span>Transition</span>
-            <p>Product + UX + QA ↔ Internal Engineering</p>
-          </div>
-          <div>
-            <span>Evolved model</span>
-            <p>Product ↔ Design ↔ Engineering ↔ QA</p>
-            <small>Data and analytics supporting decisions</small>
-          </div>
-        </div>
-      </section>
-
-      <section className={`site-shell ${styles.section}`}>
-        <SectionHeader
-          eyebrow="06 · Key initiatives"
+          eyebrow="05 · Key initiatives"
           title="Three connected areas of product leadership."
         />
         <div className={styles.initiativeGrid}>
@@ -471,7 +408,7 @@ export function WowziCaseStudy() {
 
       <section className={`site-shell ${styles.section}`}>
         <SectionHeader
-          eyebrow="07 · Impact"
+          eyebrow="06 · Impact"
           title="Stronger foundations for product and delivery."
         />
         <ul className={styles.outcomeGrid}>
@@ -483,22 +420,6 @@ export function WowziCaseStudy() {
           These are qualitative outcomes. No individual product metric is
           claimed without a verified source.
         </p>
-      </section>
-
-      <section className={`site-shell ${styles.section}`}>
-        <SectionHeader
-          eyebrow="08 · What I learned"
-          title="Three lessons I still carry forward."
-        />
-        <div className={styles.lessonGrid}>
-          {lessons.map((lesson, index) => (
-            <article key={lesson.title}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <h3>{lesson.title}</h3>
-              <p>{lesson.copy}</p>
-            </article>
-          ))}
-        </div>
       </section>
 
       <section className={`site-shell ${styles.closing}`}>

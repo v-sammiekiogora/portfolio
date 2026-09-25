@@ -19,7 +19,7 @@ export default function NowPage() {
       <PageHeader
         eyebrow="Now · Updated September 2026"
         title="What I’m up to"
-        intro="A lightweight snapshot of where my attention is going — not a productivity report, just a useful marker in time."
+        intro="I’m raising a young family and making room for learning, building, and a life beyond work."
       />
       <section className="site-shell pb-16 sm:pb-24">
         <Currently />

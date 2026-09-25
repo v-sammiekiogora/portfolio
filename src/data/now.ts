@@ -32,6 +32,6 @@ export const nowItems: NowItem[] = [
   {
     label: "Outside work",
     value:
-      "Farming, football, hiking, interesting places, and paying more attention to the details around me.",
+      "Family life, farming, football, hiking, interesting places, and paying more attention to the details around me.",
   },
 ];

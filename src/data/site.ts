@@ -3,7 +3,7 @@ export const site = {
   shortName: "SM",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
-    "https://v-sammiekiogora.github.io/portfolio",
+    "https://sammymati.com",
   location: "Nairobi, Kenya",
   email: "sammiekiogora@gmail.com",
   github: "https://github.com/v-sammiekiogora",

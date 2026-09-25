@@ -36,8 +36,8 @@ jobs:
 
       - name: Build static site
         env:
-          NEXT_PUBLIC_BASE_PATH: /portfolio
-          NEXT_PUBLIC_SITE_URL: https://v-sammiekiogora.github.io/portfolio
+          NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_SITE_URL: https://sammymati.com
         run: npm run build
 
       - name: Upload Pages artifact

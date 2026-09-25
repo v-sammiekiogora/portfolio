@@ -1,5 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./WowziCaseStudy.module.css";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const scale = [
   ["200K+", "Creators onboarded"],
@@ -95,6 +98,44 @@ const lessons = [
   },
 ];
 
+const creatorScreens = [
+  {
+    src: "/work/wowzi/creator-verification.png",
+    alt: "Wowzi creator app identity-verification flow",
+    caption: "Creator verification",
+    height: 1315,
+  },
+  {
+    src: "/work/wowzi/creator-socials.png",
+    alt: "Wowzi creator app screen for linking social profiles",
+    caption: "Social profile setup",
+    height: 1314,
+  },
+  {
+    src: "/work/wowzi/creator-jobs.png",
+    alt: "Wowzi creator app showing available campaign opportunities",
+    caption: "Campaign discovery",
+    height: 1314,
+  },
+];
+
+const advertiserScreens = [
+  {
+    src: "/work/wowzi/advertiser-contracts.png",
+    alt: "Wowzi advertiser platform showing campaign contracts and participation terms",
+    caption: "Contracts and creator participation",
+    width: 1600,
+    height: 970,
+  },
+  {
+    src: "/work/wowzi/advertiser-campaign-reporting.jpg",
+    alt: "Wowzi advertiser platform campaign reporting interface",
+    caption: "Campaign reporting and creator performance",
+    width: 1600,
+    height: 1341,
+  },
+];
+
 function SectionHeader({
   eyebrow,
   title,
@@ -117,6 +158,17 @@ export function WowziCaseStudy() {
         <Link className={`text-link ${styles.backLink}`} href="/work">
           ← All work
         </Link>
+        <div className={styles.heroBrand}>
+          <Image
+            alt=""
+            aria-hidden="true"
+            height={57}
+            priority
+            src={`${basePath}/work/wowzi/wowzi-logo.svg`}
+            width={59}
+          />
+          <span>Wowzi</span>
+        </div>
         <p className="eyebrow">Wowzi · Lead Product Manager case study</p>
         <div className={styles.heroGrid}>
           <h1 className={`display ${styles.heroTitle}`}>
@@ -259,6 +311,49 @@ export function WowziCaseStudy() {
               content, and track performance.
             </p>
           </article>
+        </div>
+        <div className={styles.productSurfaces}>
+          <div className={styles.surfaceHeader}>
+            <p className="eyebrow">Creator mobile app</p>
+            <h3>From onboarding to finding the next campaign.</h3>
+          </div>
+          <div className={styles.creatorScreens}>
+            {creatorScreens.map((screen) => (
+              <figure key={screen.src}>
+                <Image
+                  alt={screen.alt}
+                  height={screen.height}
+                  sizes="(min-width: 850px) 24vw, 65vw"
+                  src={`${basePath}${screen.src}`}
+                  width={650}
+                />
+                <figcaption>{screen.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className={styles.surfaceHeader}>
+            <p className="eyebrow">Advertiser web platform</p>
+            <h3>Campaign operations, agreements, and performance in one view.</h3>
+          </div>
+          <div className={styles.advertiserScreens}>
+            {advertiserScreens.map((screen) => (
+              <figure key={screen.src}>
+                <Image
+                  alt={screen.alt}
+                  height={screen.height}
+                  sizes="(min-width: 850px) 45vw, calc(100vw - 2rem)"
+                  src={`${basePath}${screen.src}`}
+                  width={screen.width}
+                />
+                <figcaption>{screen.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className={styles.screenNote}>
+            Product screens illustrate the creator and advertiser experiences.
+            Sample campaign content is shown as interface context, not as a
+            claimed outcome.
+          </p>
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { RelatedWork } from "@/components/RelatedWork";
 import { WowziCaseStudy } from "@/components/WowziCaseStudy";
 import { site } from "@/data/site";
 import { workItems } from "@/data/work";
@@ -45,10 +46,6 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
   if (item.slug === "creator-commerce") {
     return <WowziCaseStudy />;
   }
-
-  const relatedItems = workItems
-    .filter((workItem) => workItem.slug !== item.slug)
-    .slice(0, 2);
 
   return (
     <main id="main">
@@ -119,27 +116,7 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
         ))}
       </div>
 
-      {relatedItems.length > 0 && (
-        <section className="site-shell py-14 sm:py-20">
-          <p className="eyebrow">Related work</p>
-          <div className="grid gap-px border border-line bg-line sm:grid-cols-2">
-            {relatedItems.map((relatedItem) => (
-              <article className="bg-paper p-6" key={relatedItem.slug}>
-                <h2 className="display text-3xl">{relatedItem.title}</h2>
-                <p className="mt-3 max-w-lg text-sm text-muted">
-                  {relatedItem.summary}
-                </p>
-                <Link
-                  className="text-link mt-6 inline-block text-xs font-extrabold"
-                  href={`/work/${relatedItem.slug}`}
-                >
-                  View project →
-                </Link>
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
+      <RelatedWork currentSlug={item.slug} />
     </main>
   );
 }

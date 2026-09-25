@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { RelatedWork } from "./RelatedWork";
 import styles from "./WowziCaseStudy.module.css";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -433,6 +434,7 @@ export function WowziCaseStudy() {
           Back to all work
         </Link>
       </section>
+      <RelatedWork currentSlug="creator-commerce" />
     </main>
   );
 }

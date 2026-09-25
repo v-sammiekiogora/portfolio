@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { RelatedWork } from "@/components/RelatedWork";
 import { site } from "@/data/site";
 import { AutoBuddyGallery } from "./AutoBuddyGallery";
 import styles from "./page.module.css";
@@ -340,6 +341,7 @@ export default function AutoBuddyPage() {
           Read the original AutoBuddy case study on Medium ↗
         </a>
       </section>
+      <RelatedWork currentSlug="autobuddy" />
     </main>
   );
 }

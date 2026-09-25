@@ -16,7 +16,7 @@ export const personalPhotos: PersonalPhoto[] = [
     src: "/photos/sammy-farming.jpg",
   },
   {
-    title: "After a hike",
+    title: "At the summit",
     alt: "Sammy at the summit of Oldonyo Sabuk after a hike",
     src: "/photos/sammy-hiking.jpg",
   },

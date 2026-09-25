@@ -27,6 +27,18 @@
   margin: 0;
 }
 
+.heroMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+}
+
+.heroMeta a {
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
 .heroBrand {
   display: flex;
   gap: 0.65rem;
@@ -388,6 +400,12 @@
   border: 1px solid var(--line);
   padding: 0.75rem;
   background: var(--paper);
+}
+
+.advertiserScreens img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top;
 }
 
 .screenNote {

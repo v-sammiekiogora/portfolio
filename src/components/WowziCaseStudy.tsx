@@ -121,11 +121,11 @@ const creatorScreens = [
 
 const advertiserScreens = [
   {
-    src: "/work/wowzi/advertiser-contracts.png",
-    alt: "Wowzi advertiser platform showing campaign contracts and participation terms",
-    caption: "Contracts and creator participation",
+    src: "/work/wowzi/advertiser-campaign-creation.jpg",
+    alt: "Wowzi advertiser platform showing creator discovery and selection for a new campaign",
+    caption: "Creator discovery and campaign setup",
     width: 1600,
-    height: 970,
+    height: 1194,
   },
   {
     src: "/work/wowzi/advertiser-campaign-reporting.jpg",
@@ -170,7 +170,17 @@ export function WowziCaseStudy() {
             />
             <span>Wowzi</span>
           </div>
-          <p className="eyebrow">Lead Product Manager case study</p>
+          <div className={styles.heroMeta}>
+            <p className="eyebrow">Lead Product Manager case study</p>
+            <a
+              className="text-link"
+              href="https://www.wowzi.co/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Visit wowzi.co ↗
+            </a>
+          </div>
         </div>
         <div className={styles.heroGrid}>
           <h1 className={`display ${styles.heroTitle}`}>
@@ -331,7 +341,7 @@ export function WowziCaseStudy() {
           </div>
           <div className={styles.surfaceHeader}>
             <p className="eyebrow">Advertiser web platform</p>
-            <h3>Campaign operations, agreements, and performance in one view.</h3>
+            <h3>Campaign setup, creator selection, and performance in one view.</h3>
           </div>
           <div className={styles.advertiserScreens}>
             {advertiserScreens.map((screen) => (

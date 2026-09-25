@@ -22,10 +22,8 @@ export function Footer() {
               <a
                 className="text-link"
                 href={`mailto:${site.email}`}
-                target="_blank"
-                rel="noreferrer"
               >
-                Email me ↗
+                Email me
               </a>
               <a
                 className="text-link"

@@ -25,4 +25,9 @@ export const personalPhotos: PersonalPhoto[] = [
     alt: "Sammy visiting the Nairobi National Museum",
     src: "/photos/sammy-museum.jpg",
   },
+  {
+    title: "A new chapter",
+    alt: "A baby’s hand holding Sammy’s finger",
+    src: "/photos/new-chapter.jpg",
+  },
 ];

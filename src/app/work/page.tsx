@@ -6,27 +6,19 @@ import { workItems } from "@/data/work";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected product work by Sammy Mati across developer learning and automotive services.",
+    "Selected product work by Sammy Mati across creator commerce and automotive services.",
   alternates: {
     canonical: `${site.url}/work`,
   },
 };
 
-const githubLearn = workItems.find((item) => item.slug === "github-learn");
 const wowzi = workItems.find((item) => item.slug === "creator-commerce");
 
-if (!githubLearn || !wowzi) {
-  throw new Error("GitHub Learn and Wowzi work items are required.");
+if (!wowzi) {
+  throw new Error("Wowzi work item is required.");
 }
 
 const projects = [
-  {
-    title: githubLearn.title,
-    eyebrow: githubLearn.eyebrow,
-    summary: githubLearn.summary,
-    status: githubLearn.status,
-    href: `/work/${githubLearn.slug}`,
-  },
   {
     title: "AutoBuddy",
     eyebrow: "Product · UX · Africa",
@@ -54,8 +46,8 @@ export default function WorkPage() {
             Work<span className="text-accent">.</span>
           </h1>
           <p>
-            Product stories spanning developer learning, creator commerce, and
-            automotive services—shared with the context and evidence available.
+            Product stories spanning creator commerce and automotive
+            services—shared with the context and evidence available.
           </p>
         </div>
       </header>

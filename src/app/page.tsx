@@ -10,7 +10,9 @@ export const metadata: Metadata = {
   },
 };
 
-const selectedWork = workItems.filter((item) => item.slug === "github-learn");
+const selectedWork = workItems.filter(
+  (item) => item.slug === "creator-commerce",
+);
 
 export default function Home() {
   const personJsonLd = {

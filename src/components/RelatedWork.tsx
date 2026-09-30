@@ -18,14 +18,6 @@ const projects = [
       "Turning an auto garage’s everyday operations into one product concept.",
     href: "/work/autobuddy",
   },
-  {
-    slug: "github-learn",
-    title: "GitHub Learn",
-    eyebrow: "Product · Developer learning · AI",
-    summary:
-      "Shaping how developers discover learning and move from curiosity to making.",
-    href: "/work/github-learn",
-  },
 ];
 
 export function RelatedWork({ currentSlug }: { currentSlug: string }) {
